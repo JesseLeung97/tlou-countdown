@@ -1,0 +1,49 @@
+.countdown {
+    font-family: var(--tlou-font);
+    color: white;
+    text-shadow: 0 0 1px black;
+    text-align: center;
+    display: inline-block;
+    position: sticky;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity:0;
+}
+.countdown_col {
+    display: inline-block;
+    align-items: center;
+}
+.countdown_col_element {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+.countdown_col_element strong {
+    font-size: 50px;
+    font-weight: normal;
+    width: 34px;
+}
+.countdown_animation {
+    animation: slide-up-fade-in ease 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards; 
+}
+
+@keyframes slide-up-fade-in{
+    0% {
+        opacity:0;
+    }
+    70% {
+    	opacity: 0;
+    	transform: translate(0px, 40px);
+    	-webkit-transform: translate(0px, 40px);
+    }
+    100% {
+        opacity:1;
+        transform:  translate(0px,0px);
+        -webkit-transform: translate(0px, 0px);
+    }
+}

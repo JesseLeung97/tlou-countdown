@@ -1,0 +1,24 @@
+@font-face {
+	font-family: PressGothic;
+	src: local('PressGothic'), url(./fonts/PressGothic.otf)format('truetype');
+}
+html,
+body {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #fafafa;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	--tlou-font: PressGothic;
+}
+* {
+	box-sizing: border-box;
+}
+#app {
+	height: 100vh;
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
+	position: absolute;
+}

@@ -1,0 +1,8 @@
+.wrapper {
+    height: 300vh;
+    width: 100vw;
+    background: lightgreen;
+    display: grid;
+    place-items: center;
+    scroll-snap-align: start;
+}
