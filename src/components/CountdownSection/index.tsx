@@ -4,10 +4,10 @@ import classes from "./styles.module.css";
 
 const CountdownSection = () => {
     return (
-        <div className={classes.wrapper}>
+        <section className={classes.wrapper}>
             <Countdown />
             <QuoteGenerator />
-        </div>
+        </section>
     );
 }
 

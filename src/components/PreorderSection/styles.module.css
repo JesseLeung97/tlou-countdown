@@ -1,8 +1,25 @@
 .wrapper {
-    height: 300vh;
+    min-height: 100vh;
     width: 100vw;
     background: lightgreen;
-    display: grid;
-    place-items: center;
     scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+.preorder_title {
+    font-size: 3vw;
+}
+.store_list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+}
+
+@media screen and (max-width: 600px) {
+    .store_list {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,0 +1,21 @@
+{
+    "links": {
+        "normal": "/preorder/normal",
+        "special": "/preorder/special",
+        "location": "/preorder/"
+    },
+    "preorderSection": {
+        "title": "Preorder",
+        "lastUpdatedBase": "Last updated on ",
+        "lastUpdatedDate": "June 13 2022"
+
+    },
+    "preorderStore": {
+        "normalEdition": "Normal Edition",
+        "specialEdition": "Special Edition"
+    },
+    "footer": {
+        "githubLink": "https://github.com/JesseLeung97/tlou-countdown",
+        "github": "GitHub"
+    }
+}

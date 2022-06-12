@@ -1,0 +1,44 @@
+.store_container {
+    padding: 24px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left;
+    
+}
+.store_name {
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: bold;
+    margin: 0 0;
+    margin-bottom: 10px;
+}
+.tag {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 3px 8px;
+    font-size: 14px;
+    color: #637487;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: #f3f5f8;
+    cursor: pointer;
+}
+.tag:not(:last-child) {
+    margin-right: 5px;
+}
+.tag:hover {
+    color: #121416; 
+}
+.tag-group {
+    margin-bottom: -5px; 
+}
+.tag_active {
+    color: #4c48d9;
+    background-color: rgba(76, 72, 217, 0.08); 
+}
+.tag_active:hover {
+    color: #4c48d9;
+    background-color: rgba(76, 72, 217, 0.12); 
+}
+.tag_hidden {
+    display: none;
+}

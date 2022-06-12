@@ -4,8 +4,7 @@
     text-shadow: 0 0 1px black;
     text-align: center;
     display: inline-block;
-    position: sticky;
-    top: 0;
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
     opacity:0;

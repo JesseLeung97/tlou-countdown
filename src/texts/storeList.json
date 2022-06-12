@@ -1,0 +1,124 @@
+{
+    "storeList": [
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "LA",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "LA",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "LA",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "LA",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "LA",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "LA",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "LA",
+            "hasSpecialEdition": true
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "LA",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "test",
+            "link": "jesska.io",
+            "location": "Tokyo",
+            "hasSpecialEdition": false
+        }
+    ]
+}
