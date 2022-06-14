@@ -2,7 +2,5 @@
     height: 100vh;
     width: 100vw;
     background: #673ab8;;
-    display: grid;
-    place-items: center;
     scroll-snap-align: start;
 }

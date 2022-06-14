@@ -11,12 +11,25 @@
 .preorder_title {
     font-size: 3vw;
 }
+.selected_tags {
+    padding: 24px 0;
+    transition: padding 0.3s ease-out;
+}
+.selected_tags_title {
+    display: inline-block;
+    padding-right: 5px;
+}
+.selected_tags_hidden {
+    height: 0;
+    padding: 0;
+}
 .store_list {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 48px;
 }
+
 
 @media screen and (max-width: 600px) {
     .store_list {

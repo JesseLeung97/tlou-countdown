@@ -4,10 +4,9 @@ import { Countdown } from "../Countdown";
 import { QuoteGenerator } from "../QuoteGenerator";
 import { PreorderStore } from "../PreorderStore";
 import storeListJson from "../../texts/storeList.json";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { FooterSection } from "../FooterSection";
 import texts from "../../texts/siteTexts.json";
-
 
 const PreorderSection = () => {
     const storeListFull = storeListJson.storeList;
@@ -48,9 +47,12 @@ const PreorderSection = () => {
         <section className={classes.wrapper}>
             <h1 className={classes.preorder_title}>{texts.preorderSection.title}</h1>
             <h3>{texts.preorderSection.lastUpdatedBase + texts.preorderSection.lastUpdatedDate}</h3>
-            <section>
-                <span className={`${tagClasses.tag} ${locationFilter === "" ? tagClasses.tag_hidden : ""}`}>{locationFilter}</span>
-                <span className={`${tagClasses.tag} ${!specialEditionFilter ? tagClasses.tag_hidden : ""}`}>{texts.preorderStore.specialEdition}</span>
+            <section className={`${classes.selected_tags} ${(specialEditionFilter || locationFilter !== "") ? "" : classes.selected_tags_hidden}`}>
+                {(specialEditionFilter || locationFilter !== "") &&
+                    <h3 className={classes.selected_tags_title}>{texts.preorderSection.selectedTags}</h3>
+                }
+                <span className={`${tagClasses.tag} ${locationFilter === "" ? tagClasses.tag_hidden : ""}`} onClick={() => filterLocation(locationFilter)}>{locationFilter}</span>
+                <span className={`${tagClasses.tag} ${!specialEditionFilter ? tagClasses.tag_hidden : ""}`} onClick={() => filterEdition("special")}>{texts.preorderStore.specialEdition}</span>
             </section>
             <section className={classes.store_list}>
                 { storeList.map(store => {

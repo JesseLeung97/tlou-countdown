@@ -2,9 +2,6 @@
 	font-family: PressGothic;
 	src: local('PressGothic'), url(./fonts/PressGothic.otf)format('truetype');
 }
-html {
-	scroll-snap-type: y mandatory;
-}
 html,
 body {
 	width: 100%;
@@ -13,6 +10,7 @@ body {
 	background: #fafafa;
 	font-weight: 400;
 	font-family: sans-serif;
+	overflow: hidden;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	--tlou-font: PressGothic;
@@ -20,9 +18,13 @@ body {
 * {
 	box-sizing: border-box;
 }
-#app {
-}
 a {
 	color: inherit;
 	text-decoration: none;
+}
+#scroll_container {
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+	overflow: auto;
+	position: relative;
 }
