@@ -7,118 +7,95 @@
             "hasSpecialEdition": true
         },
         {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
+            "name": "Playstation US",
+            "link": "https://direct.playstation.com/en-us/games/pages/the-last-of-us-part-1",
+            "location": "United States",
             "hasSpecialEdition": true
         },
         {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "LA",
-            "hasSpecialEdition": true
-        },
-        {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "LA",
+            "name": "Amazon US",
+            "link": "https://www.amazon.com/Last-Us-Part-PlayStation-5/dp/B0B3QWRQL8/ref=sr_1_2?crid=33HND03T2DCK9&keywords=the+last+of+us&qid=1655292965&sprefix=the+last+of+us+part+i+special+edition%2Caps%2C758&sr=8-2",
+            "location": "United States",
             "hasSpecialEdition": false
         },
         {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
+            "name": "Best Buy US",
+            "link": "https://www.bestbuy.com/site/the-last-of-us-part-i-playstation-5-playstation-5/6510195.p?skuId=6510195",
+            "location": "United States",
             "hasSpecialEdition": false
         },
         {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
-            "hasSpecialEdition": true
-        },
-        {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
-            "hasSpecialEdition": true
-        },
-        {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "LA",
-            "hasSpecialEdition": true
-        },
-        {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "LA",
+            "name": "SOPHOSlab",
+            "link": "https://www.sophoslab.hr/playstation/ps5/igre-za-ps5/476/ps5-the-last-of-us-part-i-preorder/68646",
+            "location": "Croatia",
             "hasSpecialEdition": false
         },
         {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
+            "name": "gamershop",
+            "link": "https://www.gamershop.hr/playstation5/the-last-of-us-part-i",
+            "location": "Croatia",
             "hasSpecialEdition": false
         },
         {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
-            "hasSpecialEdition": true
-        },
-        {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
-            "hasSpecialEdition": true
-        },
-        {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "LA",
-            "hasSpecialEdition": true
-        },
-        {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "LA",
+            "name": "KOODOO",
+            "link": "https://koodoo.co.za/collections/the-last-of-us/products/the-last-of-us-part-1-ps5",
+            "location": "South Africa",
             "hasSpecialEdition": false
         },
         {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
+            "name": "bt games",
+            "link": "https://btgames.co.za/the-last-of-us-part-1-ps5",
+            "location": "South Africa",
             "hasSpecialEdition": false
         },
         {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
-            "hasSpecialEdition": true
-        },
-        {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
-            "hasSpecialEdition": true
-        },
-        {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "LA",
-            "hasSpecialEdition": true
-        },
-        {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "LA",
+            "name": "Playstation JP",
+            "link": "https://store.playstation.com/ja-jp/product/JP9000-PPSA07643_00-TLOUPART1DDE0000",
+            "location": "Japan",
             "hasSpecialEdition": false
         },
         {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
+            "name": "Amazon JP",
+            "link": "https://www.amazon.co.jp/dp/B0B3RHPQRZ?th=1",
+            "location": "Japan",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "ヨドバシカメラ (Yodobashi Camera)",
+            "link": "https://www.yodobashi.com/product/100000001007149740/",
+            "location": "Japan",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "ノジマオンライン (Nojima Online)",
+            "link": "https://online.nojima.co.jp/commodity/1/4948872016469/",
+            "location": "Japan",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "ビックカメラ (Bic Camera)",
+            "link": "https://www.biccamera.com/bc/item/10218441/?source=googleps&utm_content=001210129010",
+            "location": "Japan",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "dショッピング (d Shopping)",
+            "link": "https://shopping.dmkt-sp.jp/products/?product_code=006494887201646954&sku=0064948872016469a54",
+            "location": "Japan",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Yahoo!ショッピング (Yahoo! Shopping)",
+            "link": "https://paypaymall.yahoo.co.jp/store/joshin/item/4948872016469-54-56703?sc_e=slga_fpla",
+            "location": "Japan",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Playstation BE",
+            "link": "https://store.playstation.com/nl-be/concept/10002694",
+            "location": "Belgium",
             "hasSpecialEdition": false
         }
+        
     ]
 }

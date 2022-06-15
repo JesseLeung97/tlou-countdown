@@ -12,8 +12,12 @@
     font-size: 3vw;
 }
 .selected_tags {
+    width: 60%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
     padding: 24px 0;
-    transition: padding 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 .selected_tags_title {
     display: inline-block;
@@ -23,11 +27,18 @@
     height: 0;
     padding: 0;
 }
+.location_search_container {
+    position: relative;
+}
 .store_list {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 48px;
+    width: 60%;
+    max-width: 800px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 

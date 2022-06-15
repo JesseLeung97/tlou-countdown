@@ -2,7 +2,9 @@
     padding: 24px 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     text-align: left;
-    
+}
+.store_container:nth-child(-n+2) {
+    border-top: none;
 }
 .store_name {
     font-size: 18px;
@@ -10,6 +12,7 @@
     font-weight: bold;
     margin: 0 0;
     margin-bottom: 10px;
+    transition: 0.2s all ease-out;
 }
 .tag {
     display: inline-block;

@@ -8,7 +8,8 @@
         "title": "Preorder",
         "lastUpdatedBase": "Last updated on ",
         "lastUpdatedDate": "June 13 2022",
-        "selectedTags": "Selected tags:"
+        "selectedTags": "Tags:",
+        "location": "Location"
 
     },
     "preorderStore": {
