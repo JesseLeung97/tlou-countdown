@@ -2,29 +2,30 @@
     z-index: 99;
     font-family: var(--tlou-font);
     color: white;
+    text-align: left;
     text-shadow: 0 0 1px black;
-    text-align: center;
     display: inline-block;
-    position: absolute;
-    left: 75px;
-    bottom: 50vh;
     opacity:0;
+    margin-left: -20px;
 }
 .countdown_col {
     display: inline-block;
     align-items: center;
+    text-shadow: 0 0 1px #000;
 }
 .countdown_col_element {
     display: inline-block;
-    font-size: 14px;
+    font-size: 18px;
     margin: 0 20px;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 .countdown_col_element strong {
-    font-size: 50px;
+    font-size: 64px;
+    left: -2px;
     font-weight: normal;
-    width: 34px;
+    width: 42px;
 }
 .countdown_animation {
     animation: slide-up-fade-in ease 4s;

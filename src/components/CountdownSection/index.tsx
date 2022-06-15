@@ -5,8 +5,10 @@ import classes from "./styles.module.css";
 const CountdownSection = () => {
     return (
         <section className={classes.wrapper}>
-            <Countdown />
-            <QuoteGenerator />
+            <div className={classes.container}>
+                <Countdown />
+                <QuoteGenerator />
+            </div>
         </section>
     );
 }
