@@ -1,8 +1,7 @@
 {
     "links": {
-        "normal": "/preorder/normal",
-        "special": "/preorder/special",
-        "location": "/preorder/"
+        "githubLink": "https://github.com/JesseLeung97/tlou-countdown",
+        "formspreeSubmit": "https://formspree.io/f/xlezvyev"
     },
     "preorderSection": {
         "title": "Preorder",
@@ -16,8 +15,23 @@
         "normalEdition": "Normal Edition",
         "specialEdition": "Special Edition"
     },
+    "newStoreForm": {
+        "title": "Know of a store?",
+        "storeNamePrompt": "What's it called?",
+        "storeNamePlaceholder": "Name",
+        "storeLocationPrompt": "Where is it?",
+        "storeLocationPlaceholder": "Country",
+        "storeLinkPrompt": "Where do we preorder?",
+        "storeLinkPlaceholder": "Link",
+        "storeEditionPrompt": "Is the special edition available?",
+        "available": "Yes",
+        "unavailable": "No",
+        "otherPrompt": "Want to mention something else?",
+        "thankYou": "Thank you!",
+        "submit": "Submit"
+    },
     "footer": {
-        "githubLink": "https://github.com/JesseLeung97/tlou-countdown",
+        
         "github": "GitHub"
     }
 }

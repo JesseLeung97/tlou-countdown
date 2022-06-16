@@ -3,15 +3,16 @@ import { CountdownSection } from "./components/CountdownSection";
 import { PreorderSection } from "./components/PreorderSection";
 import { FooterSection } from "./components/FooterSection";
 import { Window } from "./components/Window";
+import { ScrollHandler } from "./components/util/ScrollHandler";
 
 export function App() {
 	return (
-		<section id="scroll_container">
+		<ScrollHandler>
 			<LoadingManager>
 				<Window />
 				<CountdownSection />
 				<PreorderSection />
 			</LoadingManager>
-		</section>
+		</ScrollHandler>
 	);
 }

@@ -4,7 +4,7 @@ import texts from "../../texts/siteTexts.json";
 const FooterSection = () => {
     return (
         <section className={classes.footer_wrapper}>
-            <a href={texts.footer.githubLink}>{texts.footer.github}</a>
+            <a href={texts.links.githubLink}>{texts.footer.github}</a>
         </section>
     );
 }

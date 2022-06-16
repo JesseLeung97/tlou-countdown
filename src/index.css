@@ -15,6 +15,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	--tlou-font: PressGothic;
 	--tlou-yellow: #ffbf00;
+	--box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 * {
 	box-sizing: border-box;
@@ -24,9 +25,11 @@ a {
 	text-decoration: none;
 }
 #scroll_container {
-	scroll-snap-type: y mandatory;
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y: auto;
 	position: relative;
+}
+.scroll_container_snap {
+	scroll-snap-type: y mandatory;
 }

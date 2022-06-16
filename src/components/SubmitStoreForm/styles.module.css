@@ -1,0 +1,119 @@
+.form_wrapper {
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(18, 20, 22, 0.8)
+}
+.form_container {
+    padding: 20px 25px;
+    width: 50vw;
+    max-height: 900px;
+    max-width: 600px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    background: #f3f5f8;
+    text-align: left;
+    border-radius: 5px;
+}
+.form_title {
+    font-size: 24px;
+    line-height: 1.35;
+    margin: 0 0;
+    margin-bottom: 20px;
+    color: #121416
+}
+.close_icon {
+    display: block;
+    font-size: 24px;
+    line-height: 20px
+}
+.close_icon:hover {
+    cursor: pointer;
+    color: #637487
+}
+label:not(.radio_button_elem) {
+    padding: 12px 0;
+}
+.label {
+    display: block;
+    color: #121416;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+input[type=text] {
+    all: unset;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    color: #637487
+}
+.other_remarks_container {
+    height: 100px;
+    width: calc(100% - 32px);
+    resize: none;
+    background: none;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-left: 16px;
+    font: inherit;
+    color: #637487;
+}
+.radio_button_group {
+    margin-left: 16px;
+    color: #637487
+}
+.radio_button_elem {
+    font-weight: bold;
+    margin: 0;
+    margin-right: 10px;
+    width: 18px;
+    height: 10px;
+    background: #f3f5f8;
+}
+.radio_button_elem:hover {
+    cursor: pointer;
+}
+input[type=radio] {
+    appearance: none;
+}
+input[type=radio]:checked+label {
+    color: #121416;
+}
+.title_container,
+.thank_you_container {
+    display: flex;
+    justify-content: space-between;
+}
+.thank_you {
+    font-size: 18px;
+    margin-right: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 20px;
+}
+.submit_button {
+    all: unset;
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+    padding: 12px 24px;
+    margin-left: auto;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.submit_button:hover {
+    cursor: pointer;
+    color: #637487
+}
+
+
+
