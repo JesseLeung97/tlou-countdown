@@ -1,17 +1,18 @@
-.form_wrapper {
-    z-index: 99;
+.overlay_background {
     height: 100vh;
     width: 100vw;
-    display: grid;
-    place-items: center;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(18, 20, 22, 0.8)
+    background: rgba(18, 20, 22, 0.8);
+}
+.form_wrapper {
+    position: relative;
 }
 .form_container {
+    z-index: 99;
     padding: 20px 25px;
     width: 50vw;
     max-height: 900px;
@@ -55,6 +56,12 @@ input[type=text] {
     margin-left: 16px;
     color: #637487
 }
+input[type=text]:hover {
+    cursor: text;
+}
+input[type=text]:focus {
+    border-bottom: 1px solid #121416;
+}
 .other_remarks_container {
     height: 100px;
     width: calc(100% - 32px);
@@ -66,6 +73,9 @@ input[type=text] {
     margin-left: 16px;
     font: inherit;
     color: #637487;
+}
+.other_remarks_container:focus {
+    border: 1px solid #121416;
 }
 .radio_button_group {
     margin-left: 16px;
@@ -113,6 +123,11 @@ input[type=radio]:checked+label {
 .submit_button:hover {
     cursor: pointer;
     color: #637487
+}
+.error_text {
+    color: red;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 

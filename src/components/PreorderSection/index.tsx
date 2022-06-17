@@ -63,6 +63,14 @@ const PreorderSection = () => {
         setSpecialEditionFilter(!specialEditionFilter);
     }
 
+    const resetStoreList = () => {
+        setSpecialEditionFilter(false);
+        setLocationFilter("");
+        setStoreList(storeListFull);
+    }
+
+    
+
     return (
         <section className={classes.wrapper}>
             <h1 className={`${classes.preorder_title} ${classes.width_wrapper}`}>{texts.preorderSection.title}</h1>
@@ -76,7 +84,7 @@ const PreorderSection = () => {
                 </span>
                 <span className={`${tagClasses.tag} ${specialEditionFilter ? tagClasses.tag_active : ""}`} onClick={() => filterEdition("special")}>{texts.preorderStore.specialEdition}</span>
                 </span>
-                <span className={`${classes.open_form}`}>Open Form</span>
+                <span className={`${classes.open_form}`} onClick={() => setIsFormOpen(true)}>Open Form</span>
             </section>
             <section className={`${classes.store_list} ${classes.width_wrapper}`}>
                 { storeList.map(store => {
@@ -92,8 +100,16 @@ const PreorderSection = () => {
                             filterEdition={filterEdition} />
                     );
                 })}
+                { storeList.length < 1 && 
+                    <div className={classes.empty_list}>
+                        <span className={classes.empty_list_label}>No stores match these tags.</span>
+                        <span className={`${tagClasses.tag}`} onClick={() => resetStoreList()}>Reset</span>
+                    </div>
+                }
             </section>
-            
+            <section className={`${classes.submit_store_form} ${isFormOpen ? "" : classes.submit_store_form_open}`}>
+                <SubmitStoreForm onClose={setIsFormOpen} />
+            </section>
             <FooterSection />
         </section>
     );

@@ -1,5 +1,5 @@
 import classes from "./styles.module.css";
-import windowLoop from "./WindowLoop.mp4";
+import windowLoop from "./WindowLoop4k.mp4";
 
 const Window = () => {
     return (

@@ -28,7 +28,12 @@
         "unavailable": "No",
         "otherPrompt": "Want to mention something else?",
         "thankYou": "Thank you!",
-        "submit": "Submit"
+        "submit": "Submit",
+        "submitError": "There was an error when submitting your form.  Please reload the page and try again.",
+        "validationError": "Please make sure you provided a name, location, and link to the store.",
+        "submitSuccess_1": "Thank you for submitting a store!",
+        "submitSuccess_2": "We're extremely grateful for the help.",
+        "restart": "Submit another store"
     },
     "footer": {
         
