@@ -35,6 +35,21 @@
         "submitSuccess_2": "We're extremely grateful for the help.",
         "restart": "Submit another store"
     },
+    "about": {
+        "aboutTitle": "About",
+        "about": "The Last of Us Part I will release for the PlayStation 5 on September 2, 2022.  The game was originally released for the PlayStation 3 on June 14, 2013 and has since won more than 200 Game of the Year awards.",
+        "supportTitle": "Support",
+        "support_1": "This site's creation is due in large part to the continued support of Kastat who offered extensive CSS guidance and encouragement.",
+        "support_2": "An additional thanks to the following users who provided content for the site:",
+        "supporters": [
+            "Yash",
+            "Joans",
+            "Dusky",
+            "Klara"
+        ],
+        "disclaimerTitle": "Disclaimer",
+        "disclaimer": "This site is fan-created and has no affiliation with Naughty Dog or Sony.  Preorder links are user submitted and reviewed.  As such, their legitimacy is not 100% verifiable.  Before preordering, please exercise due dilligence."
+    },
     "footer": {
         
         "github": "GitHub"

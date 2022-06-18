@@ -1,7 +1,7 @@
 import classes from "./styles.module.css";
 import texts from "../../texts/siteTexts.json";
 import { StateUpdater, useState } from "preact/hooks";
-import { createRef, FunctionalComponent, JSX } from "preact";
+import { FunctionalComponent, JSX } from "preact";
 import { useSimpleLoadingManager } from "../util/LoadingManager";
 import { OverlayBackground } from "../util/OverlayBackground";
 
@@ -15,7 +15,6 @@ const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({
     const [isError, setIsError] = useState<boolean>(false);
     const [isSuccess, setIsSuccess] = useState<boolean>(false);
     const { status, updateStatus } = useSimpleLoadingManager();
-    const formSubmit = createRef<HTMLFormElement>();
 
     const validateForm = (data: FormData): boolean => {
         let isMissingMessage = false;
@@ -69,7 +68,7 @@ const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({
         <>
         <OverlayBackground onClick={bubbleOnClose}/>
         <div className={classes.form_wrapper}> 
-            <form ref={formSubmit} className={classes.form_container} action="https://formspree.io/f/xlezvyev" method="POST" onSubmit={async event => await onSubmit(event)} >
+            <form className={classes.form_container} action="https://formspree.io/f/xlezvyev" method="POST" onSubmit={async event => await onSubmit(event)} >
                 { status === "loading" && 
                     <div className={`${classes.overlay_background} ${classes.loading_overlay}`}>
                         <h3 className={classes.loading_content}>LOADING</h3>
