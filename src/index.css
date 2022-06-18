@@ -16,6 +16,9 @@ body {
 	--tlou-font: PressGothic;
 	--tlou-yellow: #ffbf00;
 	--box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	--text-color: white;
+	--tag-font-color: #637487;
+	--label-font-color: #121416;
 }
 * {
 	box-sizing: border-box;

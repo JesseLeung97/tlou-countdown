@@ -1,9 +1,7 @@
 import { createRef, FunctionalComponent } from "preact";
 import { useInitialize } from "../../../util";
 
-const ScrollHandler: FunctionalComponent = ({
-    children
-}) => {
+const ScrollHandler: FunctionalComponent = ({ children }) => {
     const scrollSection = createRef<HTMLElement>();
 
     const handleScroll = () => {

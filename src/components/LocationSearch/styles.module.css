@@ -13,7 +13,7 @@
     padding: 0;
     display: inline-block;
     font-size: 14px;
-    color: #637487;
+    color: var(--tag-font-color);
     border-radius: 4px;
     text-decoration: none;
     background-color: #f3f5f8;
@@ -30,7 +30,7 @@
     padding: 3px 8px;
 }
 .search_item:hover {
-    color: #121416; 
+    color: var(--label-font-color); 
 }
 .search_item_active {
     color: #4c48d9;

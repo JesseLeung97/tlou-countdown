@@ -107,7 +107,7 @@ const PreorderSection = () => {
                     </div>
                 }
             </section>
-            <section className={`${classes.submit_store_form} ${isFormOpen ? "" : classes.submit_store_form_open}`}>
+            <section className={`${classes.submit_store_form} ${isFormOpen ? classes.submit_store_form_open : ""}`}>
                 <SubmitStoreForm onClose={setIsFormOpen} />
             </section>
             <FooterSection />

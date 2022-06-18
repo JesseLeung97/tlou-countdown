@@ -2,6 +2,8 @@ import classes from "./styles.module.css";
 import texts from "../../texts/siteTexts.json";
 import { StateUpdater, useState } from "preact/hooks";
 import { createRef, FunctionalComponent, JSX } from "preact";
+import { useSimpleLoadingManager } from "../util/LoadingManager";
+import { OverlayBackground } from "../util/OverlayBackground";
 
 interface SubmitStoreFormProps {
     onClose: StateUpdater<boolean>
@@ -12,24 +14,25 @@ const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({
 }) => {
     const [isError, setIsError] = useState<boolean>(false);
     const [isSuccess, setIsSuccess] = useState<boolean>(false);
+    const { status, updateStatus } = useSimpleLoadingManager();
     const formSubmit = createRef<HTMLFormElement>();
 
     const validateForm = (data: FormData): boolean => {
-        let isMissingValues = true;
+        let isMissingMessage = false;
+        let isMissingCoreValues = false;
         for(const pair of data.entries()) {
             if(pair[0] === "message" && pair[1] !== "") {
-                return true;
-            }
-            if(pair[0] === "specialEditionAvailable" || pair[0] === "message") {
+                isMissingMessage = false;
+            } else if(pair[0] === "specialEditionAvailable" || pair[0] === "message") {
+                isMissingMessage = true;
                 continue;
-            }
-            if(pair[1] === "") {
-                setIsError(true);
-                return false
+            } else if(pair[1] === "") {
+                isMissingCoreValues = true;
             };
         }
-        setIsError(false);
-        return true;
+        const isInvalid = (isMissingCoreValues && isMissingMessage);
+        setIsError(isInvalid);
+        return !isInvalid;
     }
 
     const onSubmit = async (event: JSX.TargetedEvent<HTMLFormElement, Event>) => {
@@ -39,7 +42,7 @@ const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({
         if(!validateForm(formData)) {
             return;
         }
-        console.log("should call this shit");
+        updateStatus("loading");
         await fetch(form.action, {
             method: form.method,
             body: formData,
@@ -51,25 +54,32 @@ const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({
             setIsSuccess(true);
         }).catch(err => {
             console.log(texts.newStoreForm.submitError);
+        }).finally(() => {
+            updateStatus("loaded");
         });
     }
 
-    const bubbleOnClose = (close: boolean) => {
+    const bubbleOnClose = () => {
         setIsError(false);
         setIsSuccess(false);
-        onClose(close);
+        onClose(false);
     }
 
     return (
         <>
-        <div className={classes.overlay_background} onClick={() => bubbleOnClose(true)} />
+        <OverlayBackground onClick={bubbleOnClose}/>
         <div className={classes.form_wrapper}> 
             <form ref={formSubmit} className={classes.form_container} action="https://formspree.io/f/xlezvyev" method="POST" onSubmit={async event => await onSubmit(event)} >
+                { status === "loading" && 
+                    <div className={`${classes.overlay_background} ${classes.loading_overlay}`}>
+                        <h3 className={classes.loading_content}>LOADING</h3>
+                    </div>
+                }
                 { isSuccess && 
                     <>
                     <span className={classes.title_container}>
                         <h3 className={classes.form_title}>{texts.newStoreForm.submitSuccess_1}<br/>{texts.newStoreForm.submitSuccess_2}</h3>
-                        <div className={classes.close_icon} onClick={() => bubbleOnClose(false)} >x</div>
+                        <div className={classes.close_icon} onClick={() => bubbleOnClose()} >x</div>
                     </span>
                     <span className={classes.submit_button} onClick={() => setIsSuccess(false)}>{texts.newStoreForm.restart}</span>
                     </>
@@ -83,7 +93,7 @@ const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({
                                 <span className={classes.error_text}>{texts.newStoreForm.validationError}</span>
                             }
                         </h3>
-                        <div className={classes.close_icon} onClick={() => bubbleOnClose(false)} >x</div>
+                        <div className={classes.close_icon} onClick={() => bubbleOnClose()} >x</div>
                     </span>
                     <label for="form_store_name">
                         <span className={classes.label}>{texts.newStoreForm.storeNamePrompt}</span>

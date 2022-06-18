@@ -1,13 +1,3 @@
-.overlay_background {
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(18, 20, 22, 0.8);
-}
 .form_wrapper {
     position: relative;
 }
@@ -29,7 +19,7 @@
     line-height: 1.35;
     margin: 0 0;
     margin-bottom: 20px;
-    color: #121416
+    color: var(--label-font-color);
 }
 .close_icon {
     display: block;
@@ -38,14 +28,14 @@
 }
 .close_icon:hover {
     cursor: pointer;
-    color: #637487
+    color: var(--tag-font-color);
 }
 label:not(.radio_button_elem) {
     padding: 12px 0;
 }
 .label {
     display: block;
-    color: #121416;
+    color: var(--label-font-color);
     font-size: 18px;
     margin-bottom: 12px;
 }
@@ -54,13 +44,13 @@ input[type=text] {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     width: calc(100% - 32px);
     margin-left: 16px;
-    color: #637487
+    color: var(--tag-font-color);
 }
 input[type=text]:hover {
     cursor: text;
 }
 input[type=text]:focus {
-    border-bottom: 1px solid #121416;
+    border-bottom: 1px solid var(--label-font-color);
 }
 .other_remarks_container {
     height: 100px;
@@ -72,14 +62,14 @@ input[type=text]:focus {
     border-radius: 5px;
     margin-left: 16px;
     font: inherit;
-    color: #637487;
+    color: var(--tag-font-color);
 }
 .other_remarks_container:focus {
-    border: 1px solid #121416;
+    border: 1px solid var(--label-font-color);
 }
 .radio_button_group {
     margin-left: 16px;
-    color: #637487
+    color: var(--tag-font-color);
 }
 .radio_button_elem {
     font-weight: bold;
@@ -96,7 +86,7 @@ input[type=radio] {
     appearance: none;
 }
 input[type=radio]:checked+label {
-    color: #121416;
+    color: var(--label-font-color);
 }
 .title_container,
 .thank_you_container {
@@ -122,12 +112,19 @@ input[type=radio]:checked+label {
 }
 .submit_button:hover {
     cursor: pointer;
-    color: #637487
+    color: var(--tag-font-color);
 }
 .error_text {
     color: red;
     font-size: 16px;
     font-weight: normal;
+}
+.loading_overlay {
+    display: grid;
+    place-items: center;
+}
+.loading_content {
+    color: white;
 }
 
 
