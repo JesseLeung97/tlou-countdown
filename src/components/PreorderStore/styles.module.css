@@ -1,6 +1,6 @@
 .store_container {
     padding: 24px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: var(--border-line);
     text-align: left;
 }
 .store_container:nth-child(-n+2) {
@@ -12,6 +12,7 @@
     font-weight: bold;
     margin: 0 0;
     margin-bottom: 10px;
+    color: var(--label-font-color);
     transition: 0.2s all ease-out;
 }
 .tag {

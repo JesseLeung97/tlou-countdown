@@ -41,7 +41,7 @@ label:not(.radio_button_elem) {
 }
 input[type=text] {
     all: unset;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: var(--border-line);
     width: calc(100% - 32px);
     margin-left: 16px;
     color: var(--tag-font-color);
@@ -58,7 +58,7 @@ input[type=text]:focus {
     resize: none;
     background: none;
     outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: var(--border-line);
     border-radius: 5px;
     margin-left: 16px;
     font: inherit;
@@ -118,6 +118,7 @@ input[type=radio]:checked+label {
     color: red;
     font-size: 16px;
     font-weight: normal;
+    line-height: initial;
 }
 .loading_overlay {
     display: grid;

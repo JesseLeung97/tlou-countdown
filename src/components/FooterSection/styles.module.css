@@ -1,6 +1,32 @@
 .footer_wrapper {
     height: 84px;
-    width: 100%;
     bottom: 0;
-    display: block;
+    display: grid;
+    place-items: center;
+}
+.width_wrapper {
+    width: 60%;
+    max-width: 800px;
+    display: flex;
+    gap: 48px;
+}
+.about_page {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+}
+.about_page_open {
+    visibility: visible; 
+}
+.footer_link {
+    font-size: 16px;
+}
+.footer_link:hover {
+    cursor: pointer;
+    color: var(--tag-font-color);
 }

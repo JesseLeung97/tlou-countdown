@@ -28,7 +28,7 @@ const QuoteGenerator = () => {
 
     return (
         <div className={classes.quote_container}>
-            <h2 className={classes.shown_quote}>{quote}</h2>
+            <h2 className={classes.shown_quote}>{quote !== "" ? `"${quote}"` : ""}</h2>
         </div>
     );
 }

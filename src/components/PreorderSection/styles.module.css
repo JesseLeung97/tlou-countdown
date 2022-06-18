@@ -61,7 +61,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 48px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: var(--border-line);
 }
 .empty_list {
     padding: 24px 0;
@@ -84,6 +84,7 @@
 .submit_store_form_open {
     visibility: visible; 
 }
+
 
 
 @media screen and (max-width: 600px) {

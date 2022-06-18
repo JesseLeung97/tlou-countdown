@@ -62,3 +62,25 @@
     cursor: pointer;
     color: var(--tag-font-color);
 }
+.supporters_list {
+    width: calc(100% - 48px);
+    margin-left: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+}
+.supporter {
+    position: relative;
+    padding-left: 20px;
+}
+.supporter:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    top: calc(50% - 2px);
+    background: var(--tag-font-color);
+    border-radius: 7px;
+    height: 7px;
+    width: 7px;
+    outline: 2px solid #f3f5f8;
+}

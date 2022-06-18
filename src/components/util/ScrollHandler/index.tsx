@@ -1,6 +1,16 @@
 import { createRef, FunctionalComponent } from "preact";
 import { useInitialize } from "../../../util";
 
+const preorderSectionRef = createRef<HTMLElement>();
+const scrollToPreorder = () => {
+    if(preorderSectionRef.current) {
+        preorderSectionRef.current.scrollIntoView({
+            behavior: "smooth",
+        });
+    }
+}
+
+
 const ScrollHandler: FunctionalComponent = ({ children }) => {
     const scrollSection = createRef<HTMLElement>();
 
@@ -23,7 +33,9 @@ const ScrollHandler: FunctionalComponent = ({ children }) => {
 }
 
 export {
-    ScrollHandler
+    ScrollHandler,
+    preorderSectionRef,
+    scrollToPreorder
 }
 
 

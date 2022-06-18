@@ -7,6 +7,7 @@ const Window = () => {
             <video width="100vw" height="100vh" autoPlay={true} muted={true} loop={true} className={classes.window}>
                 <source src={windowLoop} type="video/mp4" />
             </video>
+            <div className={classes.blur_overlay}/>
         </>
     );
 }

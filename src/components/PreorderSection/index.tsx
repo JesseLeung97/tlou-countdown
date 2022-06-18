@@ -3,10 +3,10 @@ import tagClasses from "../PreorderStore/styles.module.css";
 import { PreorderStore } from "../PreorderStore";
 import storeListJson from "../../texts/storeList.json";
 import { useState } from "preact/hooks";
-import { FooterSection } from "../FooterSection";
 import texts from "../../texts/siteTexts.json";
 import { LocationSearch } from "../LocationSearch";
 import { SubmitStoreForm } from "../SubmitStoreForm";
+import { preorderSectionRef } from "../util/ScrollHandler";
 
 const PreorderSection = () => {
     const storeListFull = storeListJson.storeList;
@@ -69,10 +69,8 @@ const PreorderSection = () => {
         setStoreList(storeListFull);
     }
 
-    
-
     return (
-        <section className={classes.wrapper}>
+        <section ref={preorderSectionRef} className={classes.wrapper}>
             <h1 className={`${classes.preorder_title} ${classes.width_wrapper}`}>{texts.preorderSection.title}</h1>
             <h3 className={`${classes.last_updated} ${classes.width_wrapper}`}>{texts.preorderSection.lastUpdatedBase + texts.preorderSection.lastUpdatedDate}</h3>
             <section className={`${classes.selected_tags} ${classes.width_wrapper}`}>
@@ -110,7 +108,6 @@ const PreorderSection = () => {
             <section className={`${classes.submit_store_form} ${isFormOpen ? classes.submit_store_form_open : ""}`}>
                 <SubmitStoreForm onClose={setIsFormOpen} />
             </section>
-            <FooterSection />
         </section>
     );
 }

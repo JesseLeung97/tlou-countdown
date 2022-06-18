@@ -9,9 +9,7 @@ interface SubmitStoreFormProps {
     onClose: StateUpdater<boolean>
 }
 
-const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({
-    onClose
-}) => {
+const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({ onClose }) => {
     const [isError, setIsError] = useState<boolean>(false);
     const [isSuccess, setIsSuccess] = useState<boolean>(false);
     const { status, updateStatus } = useSimpleLoadingManager();

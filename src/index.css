@@ -19,6 +19,7 @@ body {
 	--text-color: white;
 	--tag-font-color: #637487;
 	--label-font-color: #121416;
+	--border-line: 1px solid rgba(0, 0, 0, 0.1);
 }
 * {
 	box-sizing: border-box;
