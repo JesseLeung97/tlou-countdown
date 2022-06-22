@@ -3,16 +3,15 @@
 }
 .form_container {
     z-index: 99;
-    padding: 20px 25px;
+    padding: 25px 25px;
     width: 50vw;
     max-height: 900px;
     max-width: 600px;
-    background: white;
     display: flex;
     flex-direction: column;
-    background: #f3f5f8;
+    background: var(--tag-background-color);
     text-align: left;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 .form_title {
     font-size: 24px;
@@ -24,7 +23,8 @@
 .close_icon {
     display: block;
     font-size: 24px;
-    line-height: 20px
+    line-height: 20px;
+    color: var(--label-font-color);
 }
 .close_icon:hover {
     cursor: pointer;
@@ -41,9 +41,12 @@ label:not(.radio_button_elem) {
 }
 input[type=text] {
     all: unset;
-    border-bottom: var(--border-line);
+    border-bottom: 1px solid rgba(149, 159, 178, 0.25);
     width: calc(100% - 32px);
     margin-left: 16px;
+    color: var(--tag-font-color);
+}
+input[type=text]::placeholder {
     color: var(--tag-font-color);
 }
 input[type=text]:hover {
@@ -58,7 +61,7 @@ input[type=text]:focus {
     resize: none;
     background: none;
     outline: none;
-    border: var(--border-line);
+    border: 1px solid rgba(149, 159, 178, 0.25);
     border-radius: 5px;
     margin-left: 16px;
     font: inherit;
@@ -77,7 +80,7 @@ input[type=text]:focus {
     margin-right: 10px;
     width: 18px;
     height: 10px;
-    background: #f3f5f8;
+    background: var(--tag-background-color);
 }
 .radio_button_elem:hover {
     cursor: pointer;
@@ -99,6 +102,7 @@ input[type=radio]:checked+label {
     padding-top: 12px;
     padding-bottom: 12px;
     margin-top: 20px;
+    color: var(--label-font-color);
 }
 .submit_button {
     all: unset;
@@ -109,6 +113,7 @@ input[type=radio]:checked+label {
     margin-left: auto;
     margin-top: 20px;
     font-weight: bold;
+    color: var(--label-font-color);
 }
 .submit_button:hover {
     cursor: pointer;
@@ -126,6 +131,27 @@ input[type=radio]:checked+label {
 }
 .loading_content {
     color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .form_wrapper {
+        width: 95%;
+    }
+    .form_container {
+        width: 100%;
+        padding: 20px 20px;
+    }
+    input[type=text] {
+        all: unset;
+        border-bottom: var(--border-line);
+        width: calc(100% - 16px);
+        margin-left: 8px;
+        color: var(--tag-font-color);
+    }
+    .other_remarks_container {
+        margin-left: 8px;
+        width: calc(100% - 16px);
+    }
 }
 
 

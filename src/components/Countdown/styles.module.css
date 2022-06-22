@@ -1,6 +1,6 @@
 .countdown {
     font-family: var(--tlou-font);
-    color: white;
+    color: var(--label-font-color);
     text-align: left;
     text-shadow: 0 0 1px black;
     display: inline-block;

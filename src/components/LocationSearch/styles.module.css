@@ -1,4 +1,5 @@
 .search_items_container {
+    z-index: 10;
     position: absolute;
     left: 0;
     top: 21px;
@@ -16,7 +17,7 @@
     color: var(--tag-font-color);
     border-radius: 4px;
     text-decoration: none;
-    background-color: #f3f5f8;
+    background-color: var(--tag-background-color);
     cursor: pointer;
     width: 120px;
     margin-top: 5px;
@@ -33,10 +34,22 @@
     color: var(--label-font-color); 
 }
 .search_item_active {
-    color: #4c48d9;
-    background-color: rgba(76, 72, 217, 0.08); 
+    position: relative;
+    color: var(--tag-active-font-color);
+    background-color: var(--tag-active-background-color); 
 }
 .search_item_active:hover {
-    color: #4c48d9;
-    background-color: rgba(76, 72, 217, 0.12); 
+    color: var(--tag-active-font-color);
+    background-color: rgba(245, 184, 0, 0.2);
+}
+.search_item_active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    background: #707070;
+    opacity: .2;
 }

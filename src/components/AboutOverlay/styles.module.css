@@ -12,7 +12,7 @@
 }
 .about_content {
     z-index: 99;
-    padding: 20px 25px;
+    padding: 25px 25px;
     width: 50vw;
     max-height: 900px;
     max-width: 600px;
@@ -21,7 +21,7 @@
     flex-direction: column;
     background: #f3f5f8;
     text-align: left;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 .title_container {
     display: flex;
@@ -66,7 +66,8 @@
     width: calc(100% - 48px);
     margin-left: 32px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    row-gap: 5px;
 }
 .supporter {
     position: relative;
@@ -83,4 +84,18 @@
     height: 7px;
     width: 7px;
     outline: 2px solid #f3f5f8;
+}
+
+@media screen and (max-width: 600px) {
+    .about_wrapper {
+        width: 95%;
+    }
+    .about_content {
+        width: 100%;
+        padding: 20px 20px;
+    }
+    .text {
+        margin-left: 8px;
+        width: calc((100% - 16px));
+    }
 }

@@ -1,5 +1,5 @@
 .footer_wrapper {
-    height: 84px;
+    padding: 48px 0;
     bottom: 0;
     display: grid;
     place-items: center;
@@ -29,4 +29,16 @@
 .footer_link:hover {
     cursor: pointer;
     color: var(--tag-font-color);
+}
+
+@media screen and (max-width: 600px) {
+    .width_wrapper {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .footer_link {
+        line-height: 2;
+    }
 }

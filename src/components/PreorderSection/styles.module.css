@@ -1,7 +1,7 @@
 .wrapper {
     min-height: 100vh;
     width: 100vw;
-    background: lightgreen;
+    background: #000002;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
@@ -18,14 +18,16 @@
 .preorder_title {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 3vw;
+    font-size: 48px;
     text-align: left;
+    color: var(--label-font-color);
 }
 .last_updated {
     padding-top: 24px;
     margin-top: 0;
     margin-bottom: 0;
     text-align: left;
+    color: var(--label-font-color);
 }
 .selected_tags {
     margin: 0 auto;
@@ -34,6 +36,7 @@
     transition: all 0.3s ease-out;
     display: flex;
     justify-content: space-between;
+    color: var(--label-font-color);
 }
 .selected_tags_title {
     display: inline-block;
@@ -68,8 +71,9 @@
     margin-right: auto;
 }
 .empty_list_label {
-    margin-right: 5px;
+    margin-right: 10px;
     font-weight: bold;
+    color: var(--label-font-color);
 }
 .submit_store_form {
     position: fixed;
@@ -90,5 +94,11 @@
 @media screen and (max-width: 600px) {
     .store_list {
         grid-template-columns: 1fr;
+    }
+    .width_wrapper {
+        width: 90%;
+    }
+    .preorder_title {
+        font-size: 36px;
     }
 }

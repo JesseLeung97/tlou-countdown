@@ -17,12 +17,17 @@ body {
 	--tlou-yellow: #ffbf00;
 	--box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	--text-color: white;
-	--tag-font-color: #637487;
-	--label-font-color: #121416;
-	--border-line: 1px solid rgba(0, 0, 0, 0.1);
+	--tag-font-color: #959FB2;
+	--tag-background-color: #2B313B;
+	--label-font-color: #E0E0E1;
+	--tag-active-font-color: #F5B800;
+	--tag-active-background-color: rgba(245, 184, 0, 0.15);
+	--border-line: 1px solid rgba(224, 224, 225, 0.25);
 }
 * {
 	box-sizing: border-box;
+	-webkit-backface-visibility:  hidden;
+     -webkit-tap-highlight-color:  transparent;
 }
 a {
 	color: inherit;
