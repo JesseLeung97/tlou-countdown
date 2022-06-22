@@ -16,10 +16,9 @@
     width: 50vw;
     max-height: 900px;
     max-width: 600px;
-    background: white;
+    background: var(--tag-background-color);
     display: flex;
     flex-direction: column;
-    background: #f3f5f8;
     text-align: left;
     border-radius: 8px;
 }
@@ -49,6 +48,7 @@
     margin-bottom: 0;
     margin-left: 16px;
     width: calc(100% - 32px);
+    color: var(--label-font-color);
 }
 .text_margin_bottom {
     margin-bottom: 10px;
@@ -56,7 +56,8 @@
 .close_icon {
     display: block;
     font-size: 24px;
-    line-height: 20px
+    line-height: 20px;
+    color: var(--label-font-color);
 }
 .close_icon:hover {
     cursor: pointer;
@@ -72,6 +73,7 @@
 .supporter {
     position: relative;
     padding-left: 20px;
+    color: var(--label-font-color);
 }
 .supporter:after {
     content: '';
@@ -83,7 +85,7 @@
     border-radius: 7px;
     height: 7px;
     width: 7px;
-    outline: 2px solid #f3f5f8;
+    outline: 2px solid var(--tag-background-color);
 }
 
 @media screen and (max-width: 600px) {
