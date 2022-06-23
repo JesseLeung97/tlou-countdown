@@ -16,6 +16,7 @@ const Countdown = () => {
     const [hours, setHours] = useState<number>(0);
     const [minutes, setMinutes] = useState<number>(0);
     const [seconds, setSeconds] = useState<number>(0);
+    const { status } = useLoadingManager();
     const endDateLocal = new Date(
             config.END_DATE_YEAR, 
             config.END_DATE_MONTH_INDEX, 
