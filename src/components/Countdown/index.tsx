@@ -25,12 +25,9 @@ const Countdown = () => {
             endDateLocal.getMonth(), 
             endDateLocal.getDate());
     
-    const { status, updateStatus } = useLoadingManager();
 
     useInitialize(() => {
-        updateStatus("loading");
         calcRemaining();
-        updateStatus("loaded");
         if(updateInterval === null) {
             updateInterval = setInterval(() => {
                 calcRemaining();

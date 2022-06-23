@@ -3,14 +3,15 @@ import { useState, useEffect, useContext, useReducer } from "preact/hooks";
 
 type TLoadingStatus = "loading" | "loaded";
 
-type TLoadingContext = {
+type TComponentLoadingContext = {
     status: TLoadingStatus;
     updateStatus: (status: TLoadingStatus) => void;
 }
 
-type TSimpleLoadingContext = {
+type TLoadingContext = {
     status: TLoadingStatus;
-    updateStatus: (status: TLoadingStatus) => void;
+    video: TComponentLoadingContext
+    audio: TComponentLoadingContext
 }
 
 const reducer = (state: number, action: TLoadingStatus): number => {
@@ -27,40 +28,64 @@ const LoadingContext = createContext<TLoadingContext>(
     {} as TLoadingContext
 );
 
-const SimpleLoadingContext = createContext<TSimpleLoadingContext>(
-    {} as TSimpleLoadingContext
-);
-
 const useLoadingManager = (): TLoadingContext => {
     return useContext(LoadingContext);
 }
 
-const useSimpleLoadingManager = (): TSimpleLoadingContext => {
-    return useContext(SimpleLoadingContext);
-}
-
 const LoadingManager: FunctionComponent = ({ children }) => {
+    const _removeLoadingTimeout = 3000;
     const [isLoading, setIsLoading] = useState<TLoadingStatus>("loading");
-    const [loadingComponentsCount, notify] = useReducer<number, TLoadingStatus>(reducer, 0);
+    const [videoLoading, setVideoLoading] = useState<TLoadingStatus>("loading");
+    const [audioLoading, setAudioLoading] = useState<TLoadingStatus>("loading");
+
+    useEffect(() => {
+        console.log(isLoading, videoLoading, audioLoading);
+        if(videoLoading === "loaded" && audioLoading === "loaded") {
+            setIsLoading("loaded");
+        }
+        if(isLoading === "loaded") {
+            const loadingContainer = document.getElementById("loading_container");
+            const topHalf = document.getElementsByClassName("top_half_pre");
+            const bottomHalf = document.getElementsByClassName("bottom_half_pre");
+            if(loadingContainer !== null && topHalf !== null && bottomHalf !== null) {
+                Array.from(topHalf).forEach(elem => {
+                    elem.addEventListener("animationiteration", () => elem.remove());
+                });
+                Array.from(bottomHalf).forEach(elem => {
+                    elem.addEventListener("animationiteration", () => elem.remove());
+                });
+                topHalf[0].addEventListener("animationiteration", () => {
+                    loadingContainer.classList.add("loading_container_hide");
+                    setTimeout(() => {
+                        loadingContainer.remove();
+                    }, _removeLoadingTimeout);
+                });
+            }
+        }
+    }, [videoLoading, audioLoading, isLoading]);
 
     const [isSimpleLoading, setIsSimpleLoading] = useState<TLoadingStatus>("loaded");
-    const [simpleLoadingComponentsCount, notifySimple] = useReducer<number, TLoadingStatus>(reducer, 0);
-
-    useEffect(() => {
-        setIsLoading(loadingComponentsCount > 0 ? "loading" : "loaded");
-    }, [loadingComponentsCount]);
-
-    useEffect(() => {
-        setIsSimpleLoading(simpleLoadingComponentsCount > 0 ? "loading" : "loaded");
-    }, [simpleLoadingComponentsCount]);
 
     return (
-        <LoadingContext.Provider value={{status: isLoading, updateStatus: notify}}>
-            <SimpleLoadingContext.Provider value={{status: isSimpleLoading, updateStatus: notifySimple}}>
+        <LoadingContext.Provider value={{status: isLoading, video: {status: videoLoading, updateStatus: setVideoLoading}, audio: {status: audioLoading, updateStatus: setAudioLoading}}}>
+            <SimpleLoadingContext.Provider value={{status: isSimpleLoading, updateStatus: setIsSimpleLoading}}>
                 { children }
             </SimpleLoadingContext.Provider>
         </LoadingContext.Provider>
     );
+}
+
+type TSimpleLoadingContext = {
+    status: TLoadingStatus;
+    updateStatus: (status: TLoadingStatus) => void;
+}
+
+const SimpleLoadingContext = createContext<TSimpleLoadingContext>(
+    {} as TSimpleLoadingContext
+);
+
+const useSimpleLoadingManager = (): TSimpleLoadingContext => {
+    return useContext(SimpleLoadingContext);
 }
 
 export {

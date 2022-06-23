@@ -4,6 +4,7 @@ import { PreorderSection } from "./components/PreorderSection";
 import { FooterSection } from "./components/FooterSection";
 import { ScrollHandler } from "./components/util/ScrollHandler";
 import { Music } from "./components/Music";
+import { FireflyLoading } from "./components/FireflyLoading";
 
 export function App() {
 	return (

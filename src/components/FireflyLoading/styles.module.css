@@ -1,0 +1,60 @@
+.loading_container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    z-index: 99;
+    display: grid;
+    place-items: center;
+}
+.firefly_logo {
+    height: 150px;
+    width: 150px;
+}
+.firefly_logo_group {
+    
+}
+.top_half {
+    fill: transparent;
+    fill-rule: nonzero;
+    stroke: #fff;
+    stroke-width: 10px;
+    stroke-dasharray: 1923;
+    stroke-dashoffset: 1923;
+    animation: trace 2.75s ease-in-out infinite forwards;
+}
+.bottom_half {
+    fill: transparent;
+    fill-rule: nonzero;
+    stroke: #fff;
+    stroke-width: 10px;
+    stroke-dasharray: 1452;
+    stroke-dashoffset: 1452;
+    animation: trace 2.75s ease-in-out infinite backwards;
+}
+@keyframes trace {
+    50% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    70% {
+        stroke-dashoffset: 0;
+        fill: white;
+        opacity: 1;
+    }
+    75% {
+        stroke-dashoffset: 0;
+        fill: white;
+        opacity: 1;
+    }
+    90% {
+        stroke-dashoffset: 0;
+        fill: white;
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: white;
+        opacity: 0;
+    }
+}
