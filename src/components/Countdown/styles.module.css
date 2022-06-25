@@ -47,3 +47,9 @@
         -webkit-transform: translate(0px, 0px);
     }
 }
+
+@media screen and (max-width: 600px) {
+    .countdown {
+        text-align: center;
+    }
+}

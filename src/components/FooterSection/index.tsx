@@ -13,7 +13,7 @@ const FooterSection = () => {
                 <a href={texts.links.githubLink} target="_blank" className={classes.footer_link}>{texts.footer.github}</a>
                 <a href={texts.links.author} target="_blank" className={classes.footer_link}>{texts.footer.author}</a>
                 <section className={`${classes.about_page} ${isAboutOpen ? classes.about_page_open : ""}`}>
-                    <AboutOverlay onClose={setIsAboutOpen}/>
+                    <AboutOverlay aboutContainerClass={`${classes.about_container} ${isAboutOpen ? classes.about_container_open : ""}`} onClose={setIsAboutOpen}/>
                 </section>
             </div>
         </section>

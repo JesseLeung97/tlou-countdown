@@ -6,10 +6,11 @@ import { useSimpleLoadingManager } from "../util/LoadingManager";
 import { OverlayBackground } from "../util/OverlayBackground";
 
 interface SubmitStoreFormProps {
+    formContainerClass: string,
     onClose: StateUpdater<boolean>
 }
 
-const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({ onClose }) => {
+const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({ formContainerClass, onClose }) => {
     const [isError, setIsError] = useState<boolean>(false);
     const [isSuccess, setIsSuccess] = useState<boolean>(false);
     const { status, updateStatus } = useSimpleLoadingManager();
@@ -65,7 +66,7 @@ const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({ onClose })
     return (
         <>
         <OverlayBackground onClick={bubbleOnClose}/>
-        <div className={classes.form_wrapper}> 
+        <div className={`${formContainerClass ?? ""} ${classes.form_wrapper}`}> 
             <form className={classes.form_container} action="https://formspree.io/f/xlezvyev" method="POST" onSubmit={async event => await onSubmit(event)} >
                 { status === "loading" && 
                     <div className={`${classes.overlay_background} ${classes.loading_overlay}`}>
@@ -119,7 +120,7 @@ const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({ onClose })
                     </label>
                     <span className={classes.thank_you_container}>
                         <span className={classes.thank_you}>{texts.newStoreForm.thankYou}</span>
-                        <button type="submit" className={classes.submit_button}>{texts.newStoreForm.submit}</button>
+                        <button type="submit" className={classes.submit_button}>{texts.newStoreForm.submit}<span className={classes.submit_arrow}>+</span></button>
                     </span>
                     </>
                 }

@@ -6,6 +6,8 @@ import { scrollToPreorder } from "../util/ScrollHandler";
 import { AboutOverlay } from "../AboutOverlay";
 import { useState } from "preact/hooks";
 import texts from "../../texts/siteTexts.json";
+import { Music } from "../Music";
+import { MouseScroll } from "../MouseScroll";
 
 const CountdownSection = () => {
     const [isAboutOpen, setIsAboutOpen] = useState<boolean>(false);
@@ -13,14 +15,17 @@ const CountdownSection = () => {
     return (
         <section className={classes.wrapper}> 
             <Window />
+            <Music />
             <span className={`${classes.about_button}`} onClick={() => setIsAboutOpen(true)}>{texts.about.aboutTitle}</span>
-            <span className={classes.down_button} onClick={scrollToPreorder}>DOWN</span>
+            <span className={classes.down_button} onClick={scrollToPreorder}>
+                <MouseScroll />
+            </span>
             <div className={classes.container}>
                 <Countdown />
                 <QuoteGenerator />
             </div>
             <section className={`${classes.about_page} ${isAboutOpen ? classes.about_page_open : ""}`}>
-                <AboutOverlay onClose={setIsAboutOpen}/>
+                <AboutOverlay aboutContainerClass={`${classes.about_container} ${isAboutOpen ? classes.about_container_open : ""}`} onClose={setIsAboutOpen}/>
             </section>
         </section>
     );

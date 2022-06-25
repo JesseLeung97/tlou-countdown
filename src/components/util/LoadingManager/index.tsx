@@ -33,7 +33,7 @@ const useLoadingManager = (): TLoadingContext => {
 }
 
 const LoadingManager: FunctionComponent = ({ children }) => {
-    const _removeLoadingTimeout = 3000;
+    const _removeLoadingTimeout = 1750;
     const [isLoading, setIsLoading] = useState<TLoadingStatus>("loading");
     const [videoLoading, setVideoLoading] = useState<TLoadingStatus>("loading");
     const [audioLoading, setAudioLoading] = useState<TLoadingStatus>("loading");

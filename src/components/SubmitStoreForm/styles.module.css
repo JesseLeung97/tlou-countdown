@@ -117,7 +117,7 @@ input[type=radio]:checked+label {
 }
 .submit_button:hover {
     cursor: pointer;
-    color: var(--tag-font-color);
+    color: var(--tlou-yellow);
 }
 .error_text {
     color: red;
@@ -131,6 +131,19 @@ input[type=radio]:checked+label {
 }
 .loading_content {
     color: white;
+}
+.submit_arrow {
+    text-align: center;
+    display: inline-block;
+    width: 0;
+    transform: scale(0);
+    font-size: 22px;
+    line-height: 18px;
+    transition: transform 0.2s ease-out, width 0.2s ease-out;
+}
+.submit_button:hover .submit_arrow {
+    width: 30px;
+    transform: scale(100%);
 }
 
 @media screen and (max-width: 600px) {

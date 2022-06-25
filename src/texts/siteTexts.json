@@ -4,13 +4,17 @@
         "formspreeSubmit": "https://formspree.io/f/xlezvyev",
         "author": "https://github.com/JesseLeung97"
     },
+    "countdownSection": {
+        "toggleMuteOn": "Mute",
+        "toggleMuteOff": "Audio"
+    },
     "preorderSection": {
         "title": "Preorder",
         "lastUpdatedBase": "Last updated on ",
         "lastUpdatedDate": "June 13 2022",
         "selectedTags": "Tags:",
-        "location": "Location"
-
+        "location": "Location",
+        "formButton": "Know of a store?"
     },
     "preorderStore": {
         "normalEdition": "Normal Edition",
@@ -38,7 +42,8 @@
     },
     "about": {
         "aboutTitle": "About",
-        "about": "The Last of Us Part I will release for the PlayStation 5 on September 2, 2022.  The game was created by Naughty Dog and originally released for the PlayStation 3 on June 14, 2013 and has since won more than 200 Game of the Year awards.",
+        "about": "The Last of Us Part I will release for the PlayStation 5 on September 2, 2022.  The game was created by Naughty Dog and originally released for the PlayStation 3 on June 14, 2013.  It has since won more than 200 Game of the Year awards.",
+        "aboutTech": "If you would like to know more about how this site was built, please contact us through",
         "supportTitle": "Support",
         "support_1": "This site's creation is due in large part to the continued support of Kastat who offered extensive CSS guidance and encouragement.",
         "support_2": "An additional thanks to the following users who provided content for the site:",

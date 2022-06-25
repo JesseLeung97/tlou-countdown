@@ -1,8 +1,11 @@
 .mute_button {
     position: absolute;
-    top: 30px;
-    right: 70px;
-    z-index: 11;
-    font-size: 18;
+    bottom: 30px;
+    right: 170px;
+    font-size: 18px;
     color: var(--label-font-color);
+}
+.mute_button:hover {
+    cursor: pointer;
+    color: var(--tlou-yellow);
 }

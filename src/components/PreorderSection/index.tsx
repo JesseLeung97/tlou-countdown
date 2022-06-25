@@ -82,7 +82,7 @@ const PreorderSection = () => {
                 </span>
                 <span className={`${tagClasses.tag} ${specialEditionFilter ? tagClasses.tag_active : ""}`} onClick={() => filterEdition("special")}>{texts.preorderStore.specialEdition}</span>
                 </span>
-                <span className={`${classes.open_form}`} onClick={() => setIsFormOpen(true)}>Open Form</span>
+                <span className={`${classes.open_form}`} onClick={() => setIsFormOpen(true)}><h3>{texts.preorderSection.formButton}</h3><span className={classes.open_plus}>+</span></span>
             </section>
             <section className={`${classes.store_list} ${classes.width_wrapper}`}>
                 { storeList.map(store => {
@@ -106,7 +106,7 @@ const PreorderSection = () => {
                 }
             </section>
             <section className={`${classes.submit_store_form} ${isFormOpen ? classes.submit_store_form_open : ""}`}>
-                <SubmitStoreForm onClose={setIsFormOpen} />
+                <SubmitStoreForm formContainerClass={`${classes.form_container} ${isFormOpen ? classes.form_container_open : ""}`} onClose={setIsFormOpen} />
             </section>
         </section>
     );

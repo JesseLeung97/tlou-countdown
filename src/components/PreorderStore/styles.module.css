@@ -72,3 +72,9 @@
 .tag_hidden {
     display: none;
 }
+
+@media screen and (max-width: 600px) {
+    .store_container:nth-child(-n+2) {
+        border-top: var(--border-line);
+    }
+}

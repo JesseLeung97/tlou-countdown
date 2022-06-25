@@ -35,3 +35,9 @@
 		opacity: 0;
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.shown_quote {
+		text-align: center;
+	}
+}
