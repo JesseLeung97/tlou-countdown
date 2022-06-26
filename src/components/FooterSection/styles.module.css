@@ -31,7 +31,7 @@
     backdrop-filter: blur(2px);
 }
 .about_container {
-    transform: translateY(75px);
+    transform: translateY(-75px);
     transition: transform .2s ease;
 }
 .about_container_open {
@@ -39,10 +39,6 @@
 }
 .footer_link {
     font-size: 16px;
-}
-.footer_link:hover {
-    cursor: pointer;
-    color: var(--tlou-yellow);
 }
 
 @media screen and (max-width: 600px) {
@@ -54,5 +50,12 @@
     }
     .footer_link {
         line-height: 2;
+    }
+}
+
+@media (hover: hover) {
+    .footer_link:hover {
+        cursor: pointer;
+        color: var(--tlou-yellow);
     }
 }

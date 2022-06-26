@@ -24,9 +24,6 @@
     width: 100px;
     text-align: center;
 }
-.down_button:hover {
-    cursor: pointer;
-}
 .about_page {
     position: fixed;
     height: 100vh;
@@ -46,7 +43,7 @@
     backdrop-filter: blur(2px);
 }
 .about_container {
-    transform: translateY(75px);
+    transform: translateY(-75px);
     transition: transform .2s ease-out;
 }
 .about_container_open {
@@ -59,14 +56,27 @@
     right: 70px;
     color: var(--label-font-color);
 }
-.about_button:hover {
-    cursor: pointer;
-    color: var(--tlou-yellow);
-}
+
 
 @media screen and (max-width: 600px) {
     .container {
         width: 95%;
         margin: 0 auto;
+    }
+    .down_button {
+        margin: unset;
+    }
+    .about_button {
+        right: 40px;
+    }
+}
+
+@media (hover: hover) {
+    .down_button:hover {
+        cursor: pointer;
+    }
+    .about_button:hover {
+        cursor: pointer;
+        color: var(--tlou-yellow);
     }
 }

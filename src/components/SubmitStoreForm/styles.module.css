@@ -26,10 +26,6 @@
     line-height: 20px;
     color: var(--label-font-color);
 }
-.close_icon:hover {
-    cursor: pointer;
-    color: var(--tag-font-color);
-}
 label:not(.radio_button_elem) {
     padding: 12px 0;
 }
@@ -48,9 +44,6 @@ input[type=text] {
 }
 input[type=text]::placeholder {
     color: var(--tag-font-color);
-}
-input[type=text]:hover {
-    cursor: text;
 }
 input[type=text]:focus {
     border-bottom: 1px solid var(--label-font-color);
@@ -82,9 +75,6 @@ input[type=text]:focus {
     height: 10px;
     background: var(--tag-background-color);
 }
-.radio_button_elem:hover {
-    cursor: pointer;
-}
 input[type=radio] {
     appearance: none;
 }
@@ -115,10 +105,6 @@ input[type=radio]:checked+label {
     font-weight: bold;
     color: var(--label-font-color);
 }
-.submit_button:hover {
-    cursor: pointer;
-    color: var(--tlou-yellow);
-}
 .error_text {
     color: red;
     font-size: 16px;
@@ -141,10 +127,6 @@ input[type=radio]:checked+label {
     line-height: 18px;
     transition: transform 0.2s ease-out, width 0.2s ease-out;
 }
-.submit_button:hover .submit_arrow {
-    width: 30px;
-    transform: scale(100%);
-}
 
 @media screen and (max-width: 600px) {
     .form_wrapper {
@@ -164,6 +146,27 @@ input[type=radio]:checked+label {
     .other_remarks_container {
         margin-left: 8px;
         width: calc(100% - 16px);
+    }
+}
+
+@media (hover: hover) {
+    .close_icon:hover {
+        cursor: pointer;
+        color: var(--tag-font-color);
+    }
+    input[type=text]:hover {
+        cursor: text;
+    }
+    .radio_button_elem:hover {
+        cursor: pointer;
+    }
+    .submit_button:hover {
+        cursor: pointer;
+        color: var(--tlou-yellow);
+    }
+    .submit_button:hover .submit_arrow {
+        width: 30px;
+        transform: scale(100%);
     }
 }
 

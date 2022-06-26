@@ -13,10 +13,7 @@
 .bounce_alpha_delay {
     animation-delay:0.2s;
 }
-.scroll_arrow_container:hover .bounce_alpha_delay,
-.scroll_arrow_container:hover .bounce_alpha {
-    stroke: var(--tlou-yellow);
-} 
+
 @keyframes bounce_alpha {
     0% {
         opacity: 1; transform: translateY(0px) scale(1);
@@ -31,3 +28,10 @@
         opacity: 1; transform: translateY(0px) scale(1);
     }
   }
+
+@media (hover: hover) {
+    .scroll_arrow_container:hover .bounce_alpha_delay,
+    .scroll_arrow_container:hover .bounce_alpha {
+        stroke: var(--tlou-yellow);
+    }   
+}

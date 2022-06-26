@@ -7,15 +7,34 @@ import texts from "../../texts/siteTexts.json";
 import { LocationSearch } from "../LocationSearch";
 import { SubmitStoreForm } from "../SubmitStoreForm";
 import { preorderSectionRef } from "../util/ScrollHandler";
+import { useInitialize } from "../../util";
+
+type TPreorderStore = {
+    name: string,
+    link: string,
+    location: string,
+    hasSpecialEdition: boolean
+}
 
 const PreorderSection = () => {
+    const _spCheckWidth = 600;
     const storeListFull = storeListJson.storeList;
-    const locations = [...new Set(storeListFull.map(store => store.location))];
-    const [storeList, setStoreList] = useState(storeListJson.storeList);
+    const locations = [...new Set(storeListFull.map(store => store.location).sort((a, b) => a.localeCompare(b)))];
+    const [storeList, setStoreList] = useState(storeListJson.storeList.sort((a, b) => a.location.localeCompare(b.location)));
     const [locationFilter, setLocationFilter] = useState<string>("");
     const [specialEditionFilter, setSpecialEditionFilter] = useState<boolean>(false);
     const [locationFilterHover, setLocationFilterHover] = useState<boolean>(false);
     const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
+    const [isSP, setIsSP] = useState<boolean>(window.innerWidth <= _spCheckWidth);
+
+    const updateSPCheck = () => {
+        setIsSP(window.innerWidth <= _spCheckWidth);
+    }
+
+    useInitialize(() => {
+        window.addEventListener("resize", updateSPCheck);
+        return () => window.removeEventListener("resize", updateSPCheck);
+    });
 
     const filterLocation = (location: string, isForceReset: boolean = false): void => {
         const isReset = location === locationFilter;
@@ -24,24 +43,24 @@ const PreorderSection = () => {
             if(isSameLocation) {
                 setLocationFilter("");
                 if(specialEditionFilter) {
-                    setStoreList(storeListFull.filter(store => store.hasSpecialEdition === true));
+                    setStoreList(storeListFull.filter(store => store.hasSpecialEdition === true).sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
                 } else {
-                    setStoreList(storeListFull);
+                    setStoreList(storeListFull.sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
                 }
             } else {
                 setLocationFilter(location);
                 if(specialEditionFilter) {
-                    setStoreList(storeListFull.filter(store => (store.hasSpecialEdition === true && store.location === location)));
+                    setStoreList(storeListFull.filter(store => (store.hasSpecialEdition === true && store.location === location)).sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
                 } else {
-                    setStoreList(storeListFull.filter(store => store.location === location));
+                    setStoreList(storeListFull.filter(store => store.location === location).sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
                 }
             }
         } else if(isReset) {
             setLocationFilter("");
             if(specialEditionFilter) {
-                setStoreList(storeListFull.filter(store => store.hasSpecialEdition === true));
+                setStoreList(storeListFull.filter(store => store.hasSpecialEdition === true).sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
             } else {
-                setStoreList(storeListFull);
+                setStoreList(storeListFull.sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
             }
         } else {
             setLocationFilter(location);
@@ -63,6 +82,40 @@ const PreorderSection = () => {
         setSpecialEditionFilter(!specialEditionFilter);
     }
 
+    const handleLocationClick = (event: MouseEvent) => {
+        if(isSP) {
+            event.stopPropagation();
+            let setHover = !locationFilterHover;
+            if(locationFilter !== "") {
+                setHover = false;
+            }
+            setLocationFilterHover(setHover);
+        }
+        filterLocation(locationFilter);
+    }
+
+    const hoverStart = () => {
+        if(isSP) {
+            return;
+        }
+        setLocationFilterHover(true);
+    }
+
+    const hoverEnd = () => {
+        if(isSP) {
+            return;
+        }
+        setLocationFilterHover(false)
+    }
+
+    const handleWindowClick = (event: MouseEvent) => {
+        if(!isSP) {
+            return;
+        }
+        event.stopPropagation();
+        setLocationFilterHover(false);
+    }
+
     const resetStoreList = () => {
         setSpecialEditionFilter(false);
         setLocationFilter("");
@@ -70,17 +123,17 @@ const PreorderSection = () => {
     }
 
     return (
-        <section ref={preorderSectionRef} className={classes.wrapper}>
+        <section ref={preorderSectionRef} className={classes.wrapper} onClick={(e) => handleWindowClick(e)}>
             <h1 className={`${classes.preorder_title} ${classes.width_wrapper}`}>{texts.preorderSection.title}</h1>
             <h3 className={`${classes.last_updated} ${classes.width_wrapper}`}>{texts.preorderSection.lastUpdatedBase + texts.preorderSection.lastUpdatedDate}</h3>
             <section className={`${classes.selected_tags} ${classes.width_wrapper}`}>
                 <span>
                 <h3 className={`${classes.selected_tags_title}`}>{texts.preorderSection.selectedTags}</h3>
                 <span className={classes.location_search_container}>
-                    <span className={`${tagClasses.tag} ${locationFilter !== "" ? tagClasses.tag_active : ""}`} onMouseEnter={() => setLocationFilterHover(true)} onMouseLeave={() => setLocationFilterHover(false)} onClick={() => filterLocation(locationFilter)}>{locationFilter === "" ? texts.preorderSection.location : locationFilter}</span>
+                    <span className={`${tagClasses.tag} ${locationFilter !== "" ? tagClasses.tag_active : ""}`} onMouseEnter={() => hoverStart()} onMouseLeave={() => hoverEnd()} onClick={(e) => handleLocationClick(e)}>{locationFilter === "" ? texts.preorderSection.location : locationFilter}<span className={tagClasses.close_tag}>x</span></span>
                     <LocationSearch isHover={locationFilterHover} locationFilter={locationFilter} filterLocation={filterLocation} locations={locations} />
                 </span>
-                <span className={`${tagClasses.tag} ${specialEditionFilter ? tagClasses.tag_active : ""}`} onClick={() => filterEdition("special")}>{texts.preorderStore.specialEdition}</span>
+                <span className={`${tagClasses.tag} ${specialEditionFilter ? tagClasses.tag_active : ""}`} onClick={() => filterEdition("special")}>{texts.preorderStore.specialEdition}<span className={tagClasses.close_tag}>x</span></span>
                 </span>
                 <span className={`${classes.open_form}`} onClick={() => setIsFormOpen(true)}><h3>{texts.preorderSection.formButton}</h3><span className={classes.open_plus}>+</span></span>
             </section>

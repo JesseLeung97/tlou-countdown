@@ -5,7 +5,16 @@
     font-size: 18px;
     color: var(--label-font-color);
 }
-.mute_button:hover {
-    cursor: pointer;
-    color: var(--tlou-yellow);
+
+@media screen and (max-width: 600px) {
+    .mute_button {
+        right: 140px;
+    }
+}
+
+@media (hover: hover) {
+    .mute_button:hover {
+        cursor: pointer;
+        color: var(--tlou-yellow);
+    }
 }

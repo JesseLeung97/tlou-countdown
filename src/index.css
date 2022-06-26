@@ -42,3 +42,9 @@ a {
 .scroll_container_snap {
 	scroll-snap-type: y mandatory;
 }
+
+@media screen and (max-width: 600px) {
+	/* *:hover {
+		color: unset !important;
+	} */
+}
