@@ -6,7 +6,7 @@
 .shown_quote {
     color: var(--label-font-color);
     font-family: var(--tlou-font);
-	font-size: calc(12px + .7vw);
+	font-size: 22px;
 	display: inline-block;
 	width: 100%;
 	font-weight: normal;

@@ -1,0 +1,8 @@
+.icon_container {
+    height: 15px;
+    width: 15px;
+    fill: var(--tlou-yellow);
+    position: absolute;
+    top: -14px;
+    left: 8px;
+}

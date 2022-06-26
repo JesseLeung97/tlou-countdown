@@ -1,5 +1,5 @@
 import { createContext, FunctionComponent } from "preact";
-import { useState, useEffect, useContext, useReducer } from "preact/hooks";
+import { useState, useEffect, useContext } from "preact/hooks";
 
 type TLoadingStatus = "loading" | "loaded";
 
@@ -10,18 +10,9 @@ type TComponentLoadingContext = {
 
 type TLoadingContext = {
     status: TLoadingStatus;
+    animationFinished: boolean,
     video: TComponentLoadingContext
     audio: TComponentLoadingContext
-}
-
-const reducer = (state: number, action: TLoadingStatus): number => {
-    if(action === "loading") {
-        return state += 1;
-    }
-    if(action === "loaded") {
-        return state -= 1;
-    }
-    return 0;
 }
 
 const LoadingContext = createContext<TLoadingContext>(
@@ -35,11 +26,11 @@ const useLoadingManager = (): TLoadingContext => {
 const LoadingManager: FunctionComponent = ({ children }) => {
     const _removeLoadingTimeout = 1750;
     const [isLoading, setIsLoading] = useState<TLoadingStatus>("loading");
+    const [isAnimationFinished, setIsAnimationFinished] = useState<boolean>(false);
     const [videoLoading, setVideoLoading] = useState<TLoadingStatus>("loading");
     const [audioLoading, setAudioLoading] = useState<TLoadingStatus>("loading");
 
     useEffect(() => {
-        console.log(isLoading, videoLoading, audioLoading);
         if(videoLoading === "loaded" && audioLoading === "loaded") {
             setIsLoading("loaded");
         }
@@ -56,6 +47,7 @@ const LoadingManager: FunctionComponent = ({ children }) => {
                 });
                 topHalf[0].addEventListener("animationiteration", () => {
                     loadingContainer.classList.add("loading_container_hide");
+                    setIsAnimationFinished(true);
                     setTimeout(() => {
                         loadingContainer.remove();
                     }, _removeLoadingTimeout);
@@ -67,7 +59,7 @@ const LoadingManager: FunctionComponent = ({ children }) => {
     const [isSimpleLoading, setIsSimpleLoading] = useState<TLoadingStatus>("loaded");
 
     return (
-        <LoadingContext.Provider value={{status: isLoading, video: {status: videoLoading, updateStatus: setVideoLoading}, audio: {status: audioLoading, updateStatus: setAudioLoading}}}>
+        <LoadingContext.Provider value={{status: isLoading, animationFinished: isAnimationFinished, video: {status: videoLoading, updateStatus: setVideoLoading}, audio: {status: audioLoading, updateStatus: setAudioLoading}}}>
             <SimpleLoadingContext.Provider value={{status: isSimpleLoading, updateStatus: setIsSimpleLoading}}>
                 { children }
             </SimpleLoadingContext.Provider>

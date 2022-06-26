@@ -4,6 +4,7 @@ import { StateUpdater, useState } from "preact/hooks";
 import { FunctionalComponent, JSX } from "preact";
 import { useSimpleLoadingManager } from "../util/LoadingManager";
 import { OverlayBackground } from "../util/OverlayBackground";
+import { FireflyLoading } from "../FireflyLoading";
 
 interface SubmitStoreFormProps {
     formContainerClass: string,
@@ -69,9 +70,7 @@ const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({ formContai
         <div className={`${formContainerClass ?? ""} ${classes.form_wrapper}`}> 
             <form className={classes.form_container} action="https://formspree.io/f/xlezvyev" method="POST" onSubmit={async event => await onSubmit(event)} >
                 { status === "loading" && 
-                    <div className={`${classes.overlay_background} ${classes.loading_overlay}`}>
-                        <h3 className={classes.loading_content}>LOADING</h3>
-                    </div>
+                    <FireflyLoading />
                 }
                 { isSuccess && 
                     <>
@@ -79,7 +78,7 @@ const SubmitStoreForm: FunctionalComponent<SubmitStoreFormProps> = ({ formContai
                         <h3 className={classes.form_title}>{texts.newStoreForm.submitSuccess_1}<br/>{texts.newStoreForm.submitSuccess_2}</h3>
                         <div className={classes.close_icon} onClick={() => bubbleOnClose()} >x</div>
                     </span>
-                    <span className={classes.submit_button} onClick={() => setIsSuccess(false)}>{texts.newStoreForm.restart}</span>
+                    <span className={classes.submit_button} onClick={() => setIsSuccess(false)}>{texts.newStoreForm.restart}<span className={classes.submit_arrow}>+</span></span>
                     </>
                 }
                 { !isSuccess &&

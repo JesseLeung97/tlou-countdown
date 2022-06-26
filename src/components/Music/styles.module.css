@@ -5,6 +5,15 @@
     font-size: 18px;
     color: var(--label-font-color);
 }
+.button_icon {
+    text-align: right;
+    display: inline-block;
+    width: 0;
+    transform: scale(0);
+    line-height: 0;
+    transition: transform 0.2s ease-out, width 0.2s ease-out;
+    color: var(--tag-font-color);
+}
 
 @media screen and (max-width: 600px) {
     .mute_button {
@@ -16,5 +25,9 @@
     .mute_button:hover {
         cursor: pointer;
         color: var(--tlou-yellow);
+    }
+    .mute_button:hover .button_icon {
+        width: 15px;
+        transform: scale(100%);
     }
 }

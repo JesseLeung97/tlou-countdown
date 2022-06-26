@@ -57,7 +57,6 @@
     margin: 0;
     display: inline-block;
 }
-.close_tag,
 .open_plus {
     text-align: center;
     display: inline-block;
@@ -66,9 +65,6 @@
     font-size: 22px;
     line-height: 18px;
     transition: transform 0.2s ease-out, width 0.2s ease-out;
-}
-.close_tag {
-    font-size: unset;
 }
 .location_search_container {
     position: relative;

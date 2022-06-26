@@ -4,6 +4,7 @@ import { useLoadingManager } from "../util/LoadingManager";
 import { createRef } from "preact";
 import texts from "../../texts/siteTexts.json";
 import { useState } from "preact/hooks";
+import { AudioIcon } from "../AudioIcon";
 
 const Music = () => {
     const { audio } = useLoadingManager();
@@ -12,7 +13,6 @@ const Music = () => {
 
     const toggleAudio = () => {
         if(audioElem.current !== null) {
-            console.log("playing");
             audioElem.current.play();
             audioElem.current.muted = !audioElem.current.muted;
             setIsMuted(!isMuted);
@@ -24,7 +24,11 @@ const Music = () => {
             <audio ref={audioElem} muted={true} loop={true} onLoadStart={() => audio.updateStatus("loading")} onCanPlayThrough={() => audio.updateStatus("loaded")} id="main_menu_music">
                 <source src={mainMenuMusic} type="audio/mp3" />
             </audio>
-            <span onClick={() => toggleAudio()} className={classes.mute_button}>{isMuted ? texts.countdownSection.toggleMuteOff : texts.countdownSection.toggleMuteOn}</span>
+            <span onClick={() => toggleAudio()} className={classes.mute_button}>{isMuted ? texts.countdownSection.toggleMuteOff : texts.countdownSection.toggleMuteOn}
+                <span className={classes.button_icon}>
+                    <AudioIcon isMuted={isMuted}/>
+                </span>
+            </span>
         </>
     );
 }

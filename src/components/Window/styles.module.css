@@ -18,5 +18,6 @@
 @media screen and (max-width: 600px) {
     .window {
         height: 100%;
+        filter: brightness(0.5);
     }
 }

@@ -16,7 +16,7 @@ const Countdown = () => {
     const [hours, setHours] = useState<number>(0);
     const [minutes, setMinutes] = useState<number>(0);
     const [seconds, setSeconds] = useState<number>(0);
-    const { status } = useLoadingManager();
+    const { status, animationFinished } = useLoadingManager();
     const endDateLocal = new Date(
             config.END_DATE_YEAR, 
             config.END_DATE_MONTH_INDEX, 
@@ -74,7 +74,7 @@ const Countdown = () => {
     }
 
     return (
-        <div className={`${classes.countdown} ${status === "loaded" ? classes.countdown_animation : ""}`}>
+        <div className={`${classes.countdown} ${status === "loaded" && animationFinished ? classes.countdown_animation : ""}`}>
             <span className={classes.countdown_col}>
                 <span className={classes.countdown_col_element}>
                     <strong>{formatString(days)}</strong>

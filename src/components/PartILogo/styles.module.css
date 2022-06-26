@@ -1,0 +1,50 @@
+.logo_container {
+    position: absolute;
+    margin-left: 5%;
+    bottom: 50%;
+    opacity: 0;
+    display: none;
+}
+.animation {
+    display: block;
+    animation: logo-show;
+    animation-duration: 4s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-fill-mode:forwards;
+    animation-delay: .25s;
+}
+.logo_container img {
+    height: 150px;
+}
+
+@media screen and (max-width: 600px) {
+    .logo_container {
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+}
+
+@keyframes logo-show{
+	0% {
+		opacity: 0;
+		transform: translate(0px, 20px);
+	}
+	40% {
+		opacity: 1;
+		transform: translate(0px, 40px);
+	}
+	60% {
+		opacity: 1;
+		transform: translate(0px, 40px);
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(0px, 0px);
+	}
+}

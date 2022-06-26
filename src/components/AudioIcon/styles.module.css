@@ -1,0 +1,36 @@
+.speaker_container {
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    top: -15px;
+    left: 8px;
+}
+.speaker_base {
+    stroke: var(--tlou-yellow);
+    stroke-width: 5;
+    stroke-linejoin: round;
+    fill: var(--tlou-yellow);
+}
+.speaker_audio {
+    fill: none;
+    stroke: var(--tlou-yellow);
+    stroke-width: 5;
+    stroke-linecap: round;
+}
+.mute_container {
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    top: -15px;
+    left: 8px;
+    stroke: var(--tlou-yellow);
+    stroke-width: 5;
+}
+.mute_base {
+    fill: var(--tlou-yellow); 
+    stroke-linejoin: round;
+}
+.mute_audio {
+    fill: none;
+    stroke-linecap: round;
+}

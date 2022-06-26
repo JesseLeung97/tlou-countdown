@@ -1,12 +1,6 @@
 {
     "storeList": [
         {
-            "name": "test",
-            "link": "jesska.io",
-            "location": "Tokyo",
-            "hasSpecialEdition": true
-        },
-        {
             "name": "Playstation US",
             "link": "https://direct.playstation.com/en-us/games/pages/the-last-of-us-part-1",
             "location": "United States",
@@ -25,25 +19,25 @@
             "hasSpecialEdition": false
         },
         {
-            "name": "SOPHOSlab",
+            "name": "Sophoslab",
             "link": "https://www.sophoslab.hr/playstation/ps5/igre-za-ps5/476/ps5-the-last-of-us-part-i-preorder/68646",
             "location": "Croatia",
             "hasSpecialEdition": false
         },
         {
-            "name": "gamershop",
+            "name": "Gamershop",
             "link": "https://www.gamershop.hr/playstation5/the-last-of-us-part-i",
             "location": "Croatia",
             "hasSpecialEdition": false
         },
         {
-            "name": "KOODOO",
+            "name": "Koodoo",
             "link": "https://koodoo.co.za/collections/the-last-of-us/products/the-last-of-us-part-1-ps5",
             "location": "South Africa",
             "hasSpecialEdition": false
         },
         {
-            "name": "bt games",
+            "name": "BT Games",
             "link": "https://btgames.co.za/the-last-of-us-part-1-ps5",
             "location": "South Africa",
             "hasSpecialEdition": false
@@ -95,7 +89,42 @@
             "link": "https://store.playstation.com/nl-be/concept/10002694",
             "location": "Belgium",
             "hasSpecialEdition": false
+        },
+        {
+            "name": "Game Nation",
+            "link": "https://gamenation.in/Products/Games/The-Last-of-Us-Part-I?Age=New&a=1488&b=1974",
+            "location": "India",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Game Loot",
+            "link": "https://gameloot.in/shop/last-us-part-ps5/",
+            "location": "India",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "MX2 Games",
+            "link": "https://mx2games.com/product/the-last-of-us-part-i-ps5/",
+            "location": "India",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Prepaid Gamer Card",
+            "link": "https://prepaidgamercard.com/product/the-last-of-us-part-i-ps5/",
+            "location": "India",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Shop ATSC",
+            "link": "https://shopatsc.com/products/the-last-of-us-part-1-ps5",
+            "location": "India",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Play-Asia",
+            "link": "https://www.play-asia.com/search/The+Last+of+Us+Part+I",
+            "location": "India",
+            "hasSpecialEdition": false
         }
-        
     ]
 }

@@ -8,6 +8,8 @@ import { useState } from "preact/hooks";
 import texts from "../../texts/siteTexts.json";
 import { Music } from "../Music";
 import { MouseScroll } from "../MouseScroll";
+import { AboutIcon } from "../AboutIcon";
+import { PartILogo } from "../PartILogo";
 
 const CountdownSection = () => {
     const [isAboutOpen, setIsAboutOpen] = useState<boolean>(false);
@@ -16,10 +18,11 @@ const CountdownSection = () => {
         <section className={classes.wrapper}> 
             <Window />
             <Music />
-            <span className={`${classes.about_button}`} onClick={() => setIsAboutOpen(true)}>{texts.about.aboutTitle}</span>
+            <span className={`${classes.about_button}`} onClick={() => setIsAboutOpen(true)}>{texts.about.aboutTitle}<span className={classes.button_icon}><AboutIcon /></span></span>
             <span className={classes.down_button} onClick={scrollToPreorder}>
                 <MouseScroll />
             </span>
+            <PartILogo />
             <div className={classes.container}>
                 <Countdown />
                 <QuoteGenerator />

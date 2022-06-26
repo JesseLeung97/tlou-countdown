@@ -30,6 +30,7 @@
     animation: slide-up-fade-in ease 4s;
     animation-iteration-count: 1;
     animation-fill-mode:forwards; 
+    animation-delay: .25s;
 }
 
 @keyframes slide-up-fade-in{
