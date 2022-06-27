@@ -1,5 +1,4 @@
 import { createRef, FunctionalComponent } from "preact";
-import { useInitialize } from "../../../util";
 
 const preorderSectionRef = createRef<HTMLElement>();
 const scrollToPreorder = () => {

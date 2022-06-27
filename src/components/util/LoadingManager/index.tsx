@@ -31,7 +31,6 @@ const LoadingManager: FunctionComponent = ({ children }) => {
     const [audioLoading, setAudioLoading] = useState<TLoadingStatus>("loading");
 
     useEffect(() => {
-        console.log(isLoading, videoLoading, audioLoading);
         if(videoLoading === "loaded" && audioLoading === "loaded") {
             setIsLoading("loaded");
         }

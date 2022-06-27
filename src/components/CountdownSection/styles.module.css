@@ -1,5 +1,5 @@
 .wrapper {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     scroll-snap-align: start;
     display: flex;
@@ -27,7 +27,7 @@
 }
 .about_page {
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     top: 0;
     left: 0;

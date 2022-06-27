@@ -1,5 +1,5 @@
 .wrapper {
-    min-height: 100vh;
+    min-height: 100%;
     width: 100vw;
     background: #000002;
     scroll-snap-align: start;
@@ -87,7 +87,7 @@
 }
 .submit_store_form {
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     top: 0;
     left: 0;

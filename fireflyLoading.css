@@ -7,7 +7,7 @@ body {
 }
 #loading_container {
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background: #000002;
     z-index: 99;

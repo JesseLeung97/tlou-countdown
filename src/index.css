@@ -4,6 +4,7 @@
 }
 html,
 body {
+	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
@@ -33,8 +34,11 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+#app {
+	height: 100%;
+}
 #scroll_container {
-	height: 100vh;
+	height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
 	position: relative;
@@ -44,7 +48,7 @@ a {
 }
 
 @media screen and (max-width: 600px) {
-	/* *:hover {
-		color: unset !important;
-	} */
+	.scroll_container_snap {
+		scroll-snap-type: none;
+	}
 }
