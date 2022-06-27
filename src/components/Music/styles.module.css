@@ -1,4 +1,5 @@
 .mute_button {
+    z-index: 2;
     position: absolute;
     bottom: 30px;
     right: 170px;

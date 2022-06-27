@@ -2,7 +2,6 @@ import { LoadingManager } from "./components/util/LoadingManager";
 import { CountdownSection } from "./components/CountdownSection";
 import { PreorderSection } from "./components/PreorderSection";
 import { FooterSection } from "./components/FooterSection";
-import { ScrollHandler } from "./components/util/ScrollHandler";
 import { FireflyLoading } from "./components/FireflyLoading";
 import { SmartphoneCheck } from "./components/util/SmartphoneCheck";
 
@@ -43,13 +42,11 @@ export function App() {
 
 	return (
 		<SmartphoneCheck>
-			<ScrollHandler>
-				<LoadingManager>
-					<CountdownSection />
-					<PreorderSection />
-					<FooterSection />
-				</LoadingManager>
-			</ScrollHandler>
+			<LoadingManager>
+				<CountdownSection />
+				<PreorderSection />
+				<FooterSection />
+			</LoadingManager>
 		</SmartphoneCheck>
 	);
 }

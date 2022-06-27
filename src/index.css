@@ -4,11 +4,9 @@
 }
 html,
 body {
-	height: 100%;
-	width: 100%;
 	padding: 0;
 	margin: 0;
-	background: #fafafa;
+	background: #000002;
 	font-weight: 400;
 	font-family: sans-serif;
 	overflow: hidden;
@@ -25,6 +23,9 @@ body {
 	--tag-active-background-color: rgba(245, 184, 0, 0.15);
 	--border-line: 1px solid rgba(224, 224, 225, 0.25);
 }
+html {
+	overflow-y: auto;
+}
 * {
 	box-sizing: border-box;
 	-webkit-backface-visibility:  hidden;
@@ -35,10 +36,10 @@ a {
 	text-decoration: none;
 }
 #app {
-	height: 100%;
+	min-height: 100%;
 }
 #scroll_container {
-	height: 100%;
+	min-height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
 	position: relative;

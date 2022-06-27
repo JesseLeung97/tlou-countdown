@@ -7,7 +7,6 @@ import texts from "../../texts/siteTexts.json";
 import { LocationSearch } from "../LocationSearch";
 import { SubmitStoreForm } from "../SubmitStoreForm";
 import { preorderSectionRef } from "../util/ScrollHandler";
-import { useInitialize } from "../../util";
 import { useSmartphoneCheck } from "../util/SmartphoneCheck";
 
 type TPreorderStore = {

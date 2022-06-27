@@ -27,6 +27,7 @@ const CountdownSection = () => {
                 <Countdown />
                 <QuoteGenerator />
             </div>
+            <div className={classes.blur_overlay}/>
             <section className={`${classes.about_page} ${isAboutOpen ? classes.about_page_open : ""}`}>
                 <AboutOverlay aboutContainerClass={`${classes.about_container} ${isAboutOpen ? classes.about_container_open : ""}`} onClose={setIsAboutOpen}/>
             </section>
