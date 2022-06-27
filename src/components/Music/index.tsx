@@ -3,13 +3,39 @@ import mainMenuMusic from "./MainMenuMusic.mp3";
 import { useLoadingManager } from "../util/LoadingManager";
 import { createRef } from "preact";
 import texts from "../../texts/siteTexts.json";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { AudioIcon } from "../AudioIcon";
+import { useInitialize } from "../../util";
 
 const Music = () => {
     const { audio } = useLoadingManager();
     const audioElem = createRef<HTMLAudioElement>();
     const [isMuted, setIsMuted] = useState<boolean>(true);
+    const _spCheckWidth = 600;
+    const [isSP, setIsSP] = useState<boolean>(typeof window !== "undefined" ? window.innerWidth <= _spCheckWidth : false);
+
+    const updateSPCheck = () => {
+        if(typeof window !== "undefined") {
+            setIsSP(window.innerWidth <= _spCheckWidth);
+        }
+    }
+
+    useInitialize(() => {
+        if(typeof window !== "undefined") {
+            window.addEventListener("resize", updateSPCheck);
+        }
+        return () => {
+            if(typeof window !== undefined) {
+                window.removeEventListener("resize", updateSPCheck);
+            }
+        }
+    });
+
+    useEffect(() => {
+        if(isSP) {
+            audio.updateStatus("loaded");
+        }
+    }, [isSP]);
 
     const toggleAudio = () => {
         if(audioElem.current !== null) {
