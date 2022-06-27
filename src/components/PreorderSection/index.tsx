@@ -8,6 +8,7 @@ import { LocationSearch } from "../LocationSearch";
 import { SubmitStoreForm } from "../SubmitStoreForm";
 import { preorderSectionRef } from "../util/ScrollHandler";
 import { useInitialize } from "../../util";
+import { useSmartphoneCheck } from "../util/SmartphoneCheck";
 
 type TPreorderStore = {
     name: string,
@@ -17,7 +18,6 @@ type TPreorderStore = {
 }
 
 const PreorderSection = () => {
-    const _spCheckWidth = 600;
     const storeListFull = storeListJson.storeList;
     const locations = [...new Set(storeListFull.map(store => store.location).sort((a, b) => a.localeCompare(b)))];
     const [storeList, setStoreList] = useState(storeListJson.storeList.sort((a, b) => a.location.localeCompare(b.location)));
@@ -25,24 +25,7 @@ const PreorderSection = () => {
     const [specialEditionFilter, setSpecialEditionFilter] = useState<boolean>(false);
     const [locationFilterHover, setLocationFilterHover] = useState<boolean>(false);
     const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
-    const [isSP, setIsSP] = useState<boolean>(typeof window !== "undefined" ? window.innerWidth <= _spCheckWidth : false);
-
-    const updateSPCheck = () => {
-        if(typeof window !== "undefined") {
-            setIsSP(window.innerWidth <= _spCheckWidth);
-        }
-    }
-
-    useInitialize(() => {
-        if(typeof window !== "undefined") {
-            window.addEventListener("resize", updateSPCheck);
-        }
-        return () => {
-            if(typeof window !== "undefined") {
-                window.removeEventListener("resize", updateSPCheck);
-            }
-        }
-    });
+    const isSp = useSmartphoneCheck();
 
     const filterLocation = (location: string, isForceReset: boolean = false): void => {
         const isReset = location === locationFilter;
@@ -91,7 +74,7 @@ const PreorderSection = () => {
     }
 
     const handleLocationClick = (event: MouseEvent) => {
-        if(isSP) {
+        if(isSp) {
             event.stopPropagation();
             let setHover = !locationFilterHover;
             if(locationFilter !== "") {
@@ -103,21 +86,21 @@ const PreorderSection = () => {
     }
 
     const hoverStart = () => {
-        if(isSP) {
+        if(isSp) {
             return;
         }
         setLocationFilterHover(true);
     }
 
     const hoverEnd = () => {
-        if(isSP) {
+        if(isSp) {
             return;
         }
         setLocationFilterHover(false)
     }
 
     const handleWindowClick = (event: MouseEvent) => {
-        if(!isSP) {
+        if(!isSp) {
             return;
         }
         event.stopPropagation();

@@ -1,6 +1,6 @@
 .window {
     z-index: 0;
-    min-height: 95%;
+    min-height: 100%;
     min-width: 100%;
     position: absolute;
     object-fit: cover;

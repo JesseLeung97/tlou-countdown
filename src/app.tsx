@@ -4,6 +4,7 @@ import { PreorderSection } from "./components/PreorderSection";
 import { FooterSection } from "./components/FooterSection";
 import { ScrollHandler } from "./components/util/ScrollHandler";
 import { FireflyLoading } from "./components/FireflyLoading";
+import { SmartphoneCheck } from "./components/util/SmartphoneCheck";
 
 export function App() {
 
@@ -41,12 +42,14 @@ export function App() {
 	})();
 
 	return (
-		<ScrollHandler>
-			<LoadingManager>
-				<CountdownSection />
-				<PreorderSection />
-				<FooterSection />
-			</LoadingManager>
-		</ScrollHandler>
+		<SmartphoneCheck>
+			<ScrollHandler>
+				<LoadingManager>
+					<CountdownSection />
+					<PreorderSection />
+					<FooterSection />
+				</LoadingManager>
+			</ScrollHandler>
+		</SmartphoneCheck>
 	);
 }

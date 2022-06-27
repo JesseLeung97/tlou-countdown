@@ -5,11 +5,7 @@ import { useEffect } from "preact/hooks";
 
 const FireflyLoading = () => {
     const { status } = useLoadingManager();
-
-    useEffect(() => {
-        console.log(status);
-    }, [status])
-
+    
     return (
         <>
         { false &&

@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: space-around;
     color: var(--label-font-color);
+    background: #000002;
 }
 .container {
     width: 35%;
@@ -39,6 +40,7 @@
     transition: visibility .2s ease-out, opacity .2s ease-out, backdrop-filter .2s ease-out;
 }
 .about_page_open {
+    z-index: 11;
     visibility: visible; 
     opacity: 1;
     backdrop-filter: blur(2px);
