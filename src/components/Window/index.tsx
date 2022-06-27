@@ -7,16 +7,24 @@ import { useInitialize } from "../../util";
 
 const Window = () => {
     const _spCheckWidth = 600;
-    const [isSP, setIsSP] = useState<boolean>(window.innerWidth <= _spCheckWidth);
+    const [isSP, setIsSP] = useState<boolean>(typeof window !== "undefined" ? window.innerWidth <= _spCheckWidth : false);
     const { video } = useLoadingManager();
 
     const updateSPCheck = () => {
-        setIsSP(window.innerWidth <= _spCheckWidth);
+        if(typeof window !== "undefined") {
+            setIsSP(window.innerWidth <= _spCheckWidth);
+        }
     }
 
     useInitialize(() => {
-        window.addEventListener("resize", updateSPCheck);
-        return () => window.removeEventListener("resize", updateSPCheck);
+        if(typeof window !== "undefined") {
+            window.addEventListener("resize", updateSPCheck);
+        }
+        return () => {
+            if(typeof window !== undefined) {
+                window.removeEventListener("resize", updateSPCheck);
+            }
+        }
     });
 
     return (

@@ -25,15 +25,23 @@ const PreorderSection = () => {
     const [specialEditionFilter, setSpecialEditionFilter] = useState<boolean>(false);
     const [locationFilterHover, setLocationFilterHover] = useState<boolean>(false);
     const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
-    const [isSP, setIsSP] = useState<boolean>(window.innerWidth <= _spCheckWidth);
+    const [isSP, setIsSP] = useState<boolean>(typeof window !== "undefined" ? window.innerWidth <= _spCheckWidth : false);
 
     const updateSPCheck = () => {
-        setIsSP(window.innerWidth <= _spCheckWidth);
+        if(typeof window !== "undefined") {
+            setIsSP(window.innerWidth <= _spCheckWidth);
+        }
     }
 
     useInitialize(() => {
-        window.addEventListener("resize", updateSPCheck);
-        return () => window.removeEventListener("resize", updateSPCheck);
+        if(typeof window !== "undefined") {
+            window.addEventListener("resize", updateSPCheck);
+        }
+        return () => {
+            if(typeof window !== "undefined") {
+                window.removeEventListener("resize", updateSPCheck);
+            }
+        }
     });
 
     const filterLocation = (location: string, isForceReset: boolean = false): void => {
