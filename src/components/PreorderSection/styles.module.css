@@ -1,5 +1,5 @@
 .wrapper {
-    min-height: 100%;
+    min-height: 100vh;
     width: 100vw;
     background: #000002;
     scroll-snap-align: start;
@@ -99,6 +99,7 @@
     transition: visibility .2s ease-out, opacity .2s ease-out, backdrop-filter .2s ease-out;
 }
 .submit_store_form_open {
+    z-index: 12;
     visibility: visible; 
     opacity: 1;
     backdrop-filter: blur(2px);

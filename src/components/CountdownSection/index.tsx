@@ -10,9 +10,18 @@ import { Music } from "../Music";
 import { MouseScroll } from "../MouseScroll";
 import { AboutIcon } from "../AboutIcon";
 import { PartILogo } from "../PartILogo";
+import { useEffect } from "preact/hooks";
 
 const CountdownSection = () => {
     const [isAboutOpen, setIsAboutOpen] = useState<boolean>(false);
+
+    useEffect(() => {
+        if(isAboutOpen) {
+            document.documentElement.classList.add("no_scroll");
+        } else {
+            document.documentElement.classList.remove("no_scroll");
+        }
+    },[isAboutOpen]);
 
     return (
         <section className={classes.wrapper}> 

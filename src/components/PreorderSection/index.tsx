@@ -2,7 +2,7 @@ import classes from "./styles.module.css";
 import tagClasses from "../PreorderStore/styles.module.css";
 import { PreorderStore } from "../PreorderStore";
 import storeListJson from "../../texts/storeList.json";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import texts from "../../texts/siteTexts.json";
 import { LocationSearch } from "../LocationSearch";
 import { SubmitStoreForm } from "../SubmitStoreForm";
@@ -83,6 +83,14 @@ const PreorderSection = () => {
         }
         filterLocation(locationFilter);
     }
+
+    useEffect(() => {
+        if(isFormOpen) {
+            document.documentElement.classList.add("no_scroll");
+        } else {
+            document.documentElement.classList.remove("no_scroll");
+        }
+    },[isFormOpen]);
 
     const hoverStart = () => {
         if(isSp) {

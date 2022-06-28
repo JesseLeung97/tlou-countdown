@@ -2,9 +2,18 @@ import classes from "./styles.module.css";
 import texts from "../../texts/siteTexts.json";
 import { useState } from "preact/hooks";
 import { AboutOverlay } from "../AboutOverlay";
+import { useEffect } from "preact/hooks";
 
 const FooterSection = () => {
     const [isAboutOpen, setIsAboutOpen] = useState<boolean>(false);
+
+    useEffect(() => {
+        if(isAboutOpen) {
+            document.documentElement.classList.add("no_scroll");
+        } else {
+            document.documentElement.classList.remove("no_scroll");
+        }
+    },[isAboutOpen]);
 
     return (
         <section className={classes.footer_wrapper}>

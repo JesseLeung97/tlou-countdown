@@ -44,12 +44,6 @@ a {
 	overflow-y: auto;
 	position: relative;
 }
-.scroll_container_snap {
-	scroll-snap-type: y mandatory;
-}
-
-@media screen and (max-width: 600px) {
-	.scroll_container_snap {
-		scroll-snap-type: none;
-	}
+.no_scroll {
+	overflow-y: hidden;
 }

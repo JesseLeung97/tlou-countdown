@@ -43,7 +43,7 @@
     transition: visibility .2s ease-out, opacity .2s ease-out, backdrop-filter .2s ease-out;
 }
 .about_page_open {
-    z-index: 11;
+    z-index: 12;
     visibility: visible; 
     opacity: 1;
     backdrop-filter: blur(2px);
