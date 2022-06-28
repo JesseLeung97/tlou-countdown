@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite --host=192.168.50.105",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "tsc && vite build && aws s3 sync ./dist s3://endureandsurvive.io"
   },
   "dependencies": {
     "preact": "^10.5.15"
