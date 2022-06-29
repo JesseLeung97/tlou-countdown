@@ -125,6 +125,90 @@
             "link": "https://www.play-asia.com/search/The+Last+of+Us+Part+I",
             "location": "India",
             "hasSpecialEdition": false
+        },
+        {
+            "name": "Walmart",
+            "link": "https://www.walmart.com/ip/The-Last-of-Us-Part-1-Playstation-5/1643604134",
+            "location":"United States",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Target",
+            "link": "https://www.target.com/p/the-last-of-us-part-1-playstation-5/-/A-86967685#lnk=sametab",
+            "location": "United States",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "GameStop",
+            "link": "https://www.gamestop.com/video-games/playstation-5/products/the-last-of-us-part-1-playstation-5/344866.html",
+            "location": "United States",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "ShopTo",
+            "link": "https://www.shopto.net/en/ps5la02-the-last-of-us-part-1-p1173138/",
+            "location": "United Kingdom",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Base",
+            "link": "https://www.base.com/buy/product/the-last-of-us-part-i-ps5-inc-bonus-dlc/dgc-lastofusps5.htm",
+            "location": "United Kingdom",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "The Game Collection",
+            "link": "https://www.thegamecollection.net/the-last-of-us-part-i-ps5?sqr=the%20last%20of%20us",
+            "location": "United Kingdom",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Game",
+            "link": "https://www.game.co.uk/en/the-last-of-us-part-i-2886439",
+            "location": "United Kingdom",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Playstation UK",
+            "link": "https://store.playstation.com/en-gb/concept/10002694",
+            "location": "United Kingdom",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Amazon IN",
+            "link": " https://www.amazon.in/Last-Us-Part-Game-PlayStation/dp/B0B4289TYT/ref=sr_1_3?keywords=the+last+of+us&qid=1656477841&s=videogames&sr=1-3 ",
+            "location": "India",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "EB Games",
+            "link": "https://www.ebgames.com.au/product/ps5/275133-the-last-of-us-part-i ",
+            "location": "Australia",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "JB Hi-Fi",
+            "link": "https://www.jbhifi.com.au/products/playstation-5-the-last-of-us-part-i",
+            "location": "Australia",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Playstation CA",
+            "link": " https://www.playstation.com/en-ca/games/the-last-of-us-part-i/",
+            "location": "Canada",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Best Buy CA",
+            "link": "https://www.bestbuy.ca/en-ca/product/the-last-of-us-part-i-ps5/16299627",
+            "location": "Canada",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Amazon CA",
+            "link": "https://www.amazon.ca/Last-Us-Part-PlayStation/dp/B0B3QYVDBH/ref=sr_1_1?crid=1OOA2J7FPAFZ3&keywords=the+last+of+us&qid=1656478362&sprefix=the+last+of+%2Caps%2C302&sr=8-1",
+            "location": "Canada",
+            "hasSpecialEdition": false
         }
     ]
 }
