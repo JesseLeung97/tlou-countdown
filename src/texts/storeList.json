@@ -209,6 +209,60 @@
             "link": "https://www.amazon.ca/Last-Us-Part-PlayStation/dp/B0B3QYVDBH/ref=sr_1_1?crid=1OOA2J7FPAFZ3&keywords=the+last+of+us&qid=1656478362&sprefix=the+last+of+%2Caps%2C302&sr=8-1",
             "location": "Canada",
             "hasSpecialEdition": false
+        },
+        {
+            "name": "Webhallen",
+            "link": "https://www.webhallen.com/se/product/350120-The-Last-of-Us-Part-I-PS5",
+            "location": "Sweden",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Spelbutiken",
+            "link": "https://www.spelbutiken.se/produkt/last-of-us-part-i/23C45U/?gclid=EAIaIQobChMIt6XV9eLS-AIVgoXVCh1PWgjfEAQYASABEgJomPD_BwE",
+            "location": "Sweden",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Net on Net",
+            "link": "https://www.netonnet.se/art/gaming/spel-och-konsol/playstation/playstation-spel/ps5-the-last-of-us-part-i/1025422.14408/?gclid=EAIaIQobChMIt6XV9eLS-AIVgoXVCh1PWgjfEAQYAiABEgINM_D_BwE",
+            "location": "Sweden",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "CDON",
+            "link": "https://cdon.se/spel/the-last-of-us-part-i-102114629?gclid=EAIaIQobChMIiY-4zOPS-AIVg-d3Ch1cZgiwEAQYAiABEgKeCvD_BwE",
+            "location": "Sweden",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Inet",
+            "link": "https://www.inet.se/produkt/6610760/the-last-of-us-part-i-ps5",
+            "location": "Sweden",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Ginza",
+            "link": "https://www.ginza.se/product/410513 ",
+            "location": "Sweden",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Dustin Home",
+            "link": "https://www.dustinhome.se/product/5011294927/the-last-of-ust-part-i?ssel=true&utm_source=prisjakt.nu&utm_medium=pricecompare",
+            "location": "Sweden",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Proshop",
+            "link": "https://www.proshop.se/Spel/The-Last-of-Us-Part-I-Sony-PlayStation-5-Action/3082909?utm_source=prisjakt&utm_medium=cpc&utm_campaign=pricesite",
+            "location": "Sweden",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Komplett",
+            "link": "https://www.komplett.se/product/1214917/gaming/spel/spel-till-playstation-5/the-last-of-us-part-i?q=the%20last",
+            "location": "Sweden",
+            "hasSpecialEdition": false
         }
     ]
 }

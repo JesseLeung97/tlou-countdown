@@ -11,7 +11,7 @@
     "preorderSection": {
         "title": "Preorder",
         "lastUpdatedBase": "Last updated on ",
-        "lastUpdatedDate": "June 29 2022",
+        "lastUpdatedDate": "June 30 2022",
         "selectedTags": "Tags:",
         "location": "Location",
         "formButton": "Know of a store?"
@@ -54,7 +54,8 @@
             "Klara",
             "PK",
             "Han_Marshy",
-            "Harry"
+            "Harry",
+            "Voytron"
         ],
         "disclaimerTitle": "Disclaimer",
         "disclaimer": "This site is fan-created and has no affiliation with Naughty Dog or Sony.  Preorder links are user submitted and reviewed.  As such, their legitimacy is not 100% verifiable.  Before preordering, please exercise due dilligence."
