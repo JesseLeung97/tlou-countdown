@@ -23,3 +23,13 @@
 		text-align: center;
 	}
 }
+
+@media screen and (min-width: 2560px) {
+	.quote_container {
+		margin-top: 75px;
+		padding-left: 2%;
+	}
+	.shown_quote {
+		font-size: 42px;
+	}
+}

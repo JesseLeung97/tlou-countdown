@@ -54,3 +54,16 @@
         text-align: center;
     }
 }
+
+@media screen and (min-width: 2560px) {
+    .countdown_col_element {
+        margin: 0 1.5vw;
+        font-size: calc(36px + .25vw);
+    }
+    .countdown_col_element strong {
+        width: unset;
+        font-size: calc(128px + 1vw);
+        width: 100px;
+    }
+    
+}
