@@ -293,6 +293,78 @@
             "link": "https://www.amazon.com.mx/Last-Us-Parte-1-PlayStation/dp/B0B3SCMFNH/ref=sr_1_1?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3C2M4FMGXGNK4&keywords=the+last+of+us+part&qid=1656573676&s=videogames&sprefix=the+last+of+us+part+%2Cvideogames%2C280&sr=1-1",
             "location": "Mexico",
             "hasSpecialEdition": false
+        },
+        {
+            "name": "Playstation FR",
+            "link": "https://store.playstation.com/fr-fr/concept/10002694",
+            "location": "France",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Amazon FR",
+            "link": "https://www.amazon.fr/Last-Us-Part-PS5/dp/B0B3ZD724V/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=the+last+of+us+part+i&qid=1656686034&sr=8-1",
+            "location": "France",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Fnac",
+            "link": "https://jeux-video.fnac.com/a15941820/The-Last-of-Us-Part-I-PS5-Jeu-video-Playstation-5#omnsearchpos=1",
+            "location": "France",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Leclerc",
+            "link": "https://www.e.leclerc/fp/the-last-of-us-part-1-ps5-0711719405399",
+            "location": "France",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Playstation DE",
+            "link": "https://store.playstation.com/de-de/concept/10002694",
+            "location": "Germany",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Amazon DE",
+            "link": "https://www.amazon.de/Last-Us-Part-PlayStation/dp/B0B3RV312L?&linkCode=sl1&tag=playnation-sales-21&linkId=120f23fa6910ae374275d4f5e1a4ad3a&language=de_DE&ref_=as_li_ss_tl",
+            "location": "Germany",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Otto",
+            "link": "https://www.otto.de/suche/The%20Last%20of%20Us%20Part%20I%20%5BPlayStation%205%5D",
+            "location": "Germany",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "GameStop DE",
+            "link": "https://www.gamestop.de/PS5/Games/64724",
+            "location": "Germany",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Amazon ES",
+            "link": "https://www.amazon.es/Last-Us-Parte-PS5/dp/B0B3RZPMHY/ref=sr_1_1?keywords=the+last+of+us&qid=1656685423&sr=8-1",
+            "location": "Spain",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Game",
+            "link": "https://www.game.es/the-last-of-us-parte-i-playstation-5-205516",
+            "location": "Spain",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Media Markt",
+            "link": "https://www.mediamarkt.es/es/product/_ps5-the-last-of-us-parte-i-1534856.html",
+            "location": "Spain",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Playstation ES",
+            "link": "https://www.playstation.com/es-es/games/the-last-of-us-part-i/",
+            "location": "Spain",
+            "hasSpecialEdition": false
         }
     ]
 }

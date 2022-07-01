@@ -19,7 +19,10 @@ type TPreorderStore = {
 const PreorderSection = () => {
     const storeListFull = storeListJson.storeList;
     const locations = [...new Set(storeListFull.map(store => store.location).sort((a, b) => a.localeCompare(b)))];
-    const [storeList, setStoreList] = useState(storeListJson.storeList.sort((a, b) => a.location.localeCompare(b.location)));
+    const [storeList, setStoreList] = useState(storeListJson.storeList
+        .sort((a, b) => 
+            a.location.localeCompare(b.location) ||
+            a.name.localeCompare(b.name)));
     const [locationFilter, setLocationFilter] = useState<string>("");
     const [specialEditionFilter, setSpecialEditionFilter] = useState<boolean>(false);
     const [locationFilterHover, setLocationFilterHover] = useState<boolean>(false);
@@ -33,24 +36,46 @@ const PreorderSection = () => {
             if(isSameLocation) {
                 setLocationFilter("");
                 if(specialEditionFilter) {
-                    setStoreList(storeListFull.filter(store => store.hasSpecialEdition === true).sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
+                    setStoreList(storeListFull
+                        .filter(store => store.hasSpecialEdition === true)
+                        .sort((a: TPreorderStore, b: TPreorderStore) => 
+                            a.location.localeCompare(b.location) || 
+                            a.name.localeCompare(b.name)));
                 } else {
-                    setStoreList(storeListFull.sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
+                    setStoreList(storeListFull
+                        .sort((a: TPreorderStore, b: TPreorderStore) => 
+                            a.location.localeCompare(b.location) || 
+                            a.name.localeCompare(b.name)));
                 }
             } else {
                 setLocationFilter(location);
                 if(specialEditionFilter) {
-                    setStoreList(storeListFull.filter(store => (store.hasSpecialEdition === true && store.location === location)).sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
+                    setStoreList(storeListFull
+                        .filter(store => (store.hasSpecialEdition === true && store.location === location))
+                        .sort((a: TPreorderStore, b: TPreorderStore) => 
+                            a.location.localeCompare(b.location) || 
+                            a.name.localeCompare(b.name)));
                 } else {
-                    setStoreList(storeListFull.filter(store => store.location === location).sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
+                    setStoreList(storeListFull
+                        .filter(store => store.location === location)
+                        .sort((a: TPreorderStore, b: TPreorderStore) => 
+                            a.location.localeCompare(b.location) || 
+                            a.name.localeCompare(b.name)));
                 }
             }
         } else if(isReset) {
             setLocationFilter("");
             if(specialEditionFilter) {
-                setStoreList(storeListFull.filter(store => store.hasSpecialEdition === true).sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
+                setStoreList(storeListFull
+                    .filter(store => store.hasSpecialEdition === true)
+                    .sort((a: TPreorderStore, b: TPreorderStore) => 
+                        a.location.localeCompare(b.location) || 
+                        a.name.localeCompare(b.name)));
             } else {
-                setStoreList(storeListFull.sort((a: TPreorderStore, b: TPreorderStore) => a.location.localeCompare(b.location)));
+                setStoreList(storeListFull
+                    .sort((a: TPreorderStore, b: TPreorderStore) => 
+                        a.location.localeCompare(b.location) || 
+                        a.name.localeCompare(b.name)));
             }
         } else {
             setLocationFilter(location);
