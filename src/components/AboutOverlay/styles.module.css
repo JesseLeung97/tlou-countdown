@@ -63,7 +63,7 @@
     width: calc(100% - 48px);
     margin-left: 32px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     row-gap: 5px;
 }
 .supporter {
