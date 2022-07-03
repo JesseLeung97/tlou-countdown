@@ -285,7 +285,7 @@
         {
             "name": "Worten",
             "link": "https://www.worten.pt/gaming/pre-vendas/pre-venda-jogo-ps5-the-last-of-us-part-i-7618784",
-            "location": "Brazil",
+            "location": "Portugal",
             "hasSpecialEdition": false
         },
         {
@@ -307,9 +307,15 @@
             "hasSpecialEdition": false
         },
         {
-            "name": "Fnac",
+            "name": "Fnac FR",
             "link": "https://jeux-video.fnac.com/a15941820/The-Last-of-Us-Part-I-PS5-Jeu-video-Playstation-5#omnsearchpos=1",
             "location": "France",
+            "hasSpecialEdition": false
+        },
+        {
+            "name": "Fnac PT",
+            "link": "https://www.fnac.pt/The-Last-of-Us-Parte-I-PS5-Videojogo-PlayStation-5/a10071829",
+            "location": "Portugal",
             "hasSpecialEdition": false
         },
         {
