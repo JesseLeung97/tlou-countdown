@@ -62,6 +62,9 @@ const Countdown = () => {
             setMinutes(newMinutes);
             diff -= newMinutes * _MIN_SEC;
         }
+
+        diff = diff < 0 ? 0 : diff;
+
         setSeconds(diff);
     }
 
