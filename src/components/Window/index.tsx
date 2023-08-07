@@ -17,7 +17,7 @@ const Window = () => {
 
     return (
         <>
-            <video onCanPlayThrough={() => video.updateStatus("loaded")} onLoadedMetadata={() => handleMetadataLoaded()} width="100vw" height="100%" autoPlay={true} muted={true} loop={true} playsInline={true} className={classes.window}>
+            <video onCanPlayThrough={() => video.updateStatus("loaded")} onLoadedMetadata={() => handleMetadataLoaded()}  autoPlay={true} muted={true} loop={true} playsInline={true} className={classes.window}>
                 <source src={isSp ? windowLoopSP : windowLoop} type="video/mp4" />
             </video>
             <div className={classes.blur_overlay}/>

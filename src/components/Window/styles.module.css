@@ -8,7 +8,7 @@
 @media screen and (max-width: 600px) {
     .window {
         min-height: 100vh;
-        min-height: -webkit-fill-available;
+        /* min-height: -webkit-fill-available; */
         filter: brightness(0.5);
     }
 }
